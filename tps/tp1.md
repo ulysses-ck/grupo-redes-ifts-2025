@@ -120,3 +120,6 @@ Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. 
 
 **13- ¿Qué es un Proxy?**
 Un proxy se trata de un servidor que recibe las peticiones de un usuario y este las traslada a otro servidor. Una VPN también funciona como un servidor proxy, solamente que está toma todo el tráfico entrante de un usuario, en vez de solamente algunas peticiones.
+
+**34- (Individual para cada integrante del grupo) ¿Qué experiencia tienen en redes?**
+Ulises: He configurado una aplicación para producción usando Nginx, creando un subdominio en los registros de DNS con un CNAME y asignando los Certificados con Let's Encrypt.
