@@ -74,7 +74,7 @@ Routing & Switching y de algún otro a elección (ej. Wireless, Security, Cloud,
 
 28- Realizar cuestionario online y copiar el resultado: (1 por cada integrante)
 https://es.educaplay.com/es/recursoseducativos/706834/test_de_redes_y_comunicacion
-es.htm
+es.htm (OPCIONAL)
 
 29- Explicar el estándar IEEE 802.3 regula la red. Cómo se implementa, ventajas y
 desventajas.
