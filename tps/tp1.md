@@ -118,3 +118,6 @@ variedad de topologías y protocolos.
 
 **13- ¿Qué es un Proxy?**
 Un proxy se trata de un servidor que recibe las peticiones de un usuario y este las traslada a otro servidor. Una VPN también funciona como un servidor proxy, solamente que está toma todo el tráfico entrante de un usuario, en vez de solamente algunas peticiones.
+
+**10- Explicar el servicio de DHCP.**
+Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
