@@ -124,6 +124,9 @@ Router: Conectar diferentes redes entre sí, su uso común es para proveer acces
 
 Switch: Conectar dispositivos en una red local y enviar los datos solo al destinatario correcto, Su uso común es en redes domésticas o de oficina. Aprende las direcciones MAC y mejora el rendimiento de la red
 
+**5- ¿Qué es un protocolo de comunicaciones?**
+Es un conjunto de reglas, que al respetarse permite que las redes puedan "hablar en el mismo idioma" y comunicarse entre sí. Un protocolo define restricciones, procedimientos y formatos que definen el intercambio de paquetes para lograr la comunicación entre 2 o más servidores.
+
 **10- Explicar el servicio de DHCP.**
 Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
 
