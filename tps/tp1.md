@@ -115,6 +115,15 @@ acceder a dispositivos de almacenamiento.Estas están comúnmente compuesta de H
 Switches y de elementos de almacenamiento interconectadas entre sí usando una gran
 variedad de topologías y protocolos.
 
+**4- Diferencias entre un Hub, Repetidor, Router y SWITCH. Explicar las diferencias.**
+Hub:Conectar varios dispositivos en una red y transmitir los datos a todos ellos, su uso común es en redes pequeñas. No distingue a dónde va la información, envía todo a todos
+
+Repetidor: Regenerar y amplificar una señal, su uso común es para extender el alcance de una red. No tiene capacidad para filtrar, dirigir o interpretar datos
+
+Router: Conectar diferentes redes entre sí, su uso común es para proveer acceso a Internet. Decide la mejor ruta para enviar los datos basándose en direcciones IP  
+
+Switch: Conectar dispositivos en una red local y enviar los datos solo al destinatario correcto, Su uso común es en redes domésticas o de oficina. Aprende las direcciones MAC y mejora el rendimiento de la red
+
 **10- Explicar el servicio de DHCP.**
 Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
 
