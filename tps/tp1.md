@@ -136,6 +136,9 @@ Un proxy se trata de un servidor que recibe las peticiones de un usuario y este 
 **19- ¿Qué es un Gateway?**
 Una gateway o puerta de enlace es el dispositivo que conecta distintas redes. Su propósito es traducir la información del protocolo utilizado en una red de origen al protocolo usado en la red de destino. Si un dispositivo dentro de una red quiere comunicarse con otro que está fuera de esa misma red, se necesita una gateway. Hoy en día es muy común que las gateways se combinen con los enrutadores, por lo que muchas veces se puede hablar de una gateway refiriéndose a un enrutador. Un ejemplo muy común de esta combinación es el router que te instalan cuando contratás un servicio de internet en tu casa: este utiliza una gateway para conectar los dispositivos de la red local con redes externas, como internet.
 
+**31- ¿Qué protocolos se usan para enviar y recibir correo?**
+Los protocolos que se usan para enviar y recibir correo son: SMTP(Simple Mail Transfer Protocol), POP3(Post Office Protocol Version 3)
+
 **32- ¿Qué protocolo puede usarse para leer correo recibido?** 
 El protocolo que puede usarse para leer correo recibido es el POP3
 
