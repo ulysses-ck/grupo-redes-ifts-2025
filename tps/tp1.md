@@ -135,13 +135,10 @@ Es un conjunto de reglas, que al respetarse permite que las redes puedan "hablar
 - Diferencias: TCP/IP es más robusto y escalable, funcionando en redes grandes, mientras que NetBIOS es más limitado y suele utilizarse en redes pequeñas sin enrutamiento externo.
 
 **7. Estructura de un paquete TCP/IP y los "flags"**
-- Un paquete TCP/IP consta de varias capas:
-- Capa de enlace de datos: Encabezado con dirección MAC.
-- Capa de red: Encabezado con dirección IP origen y destino.
-- Capa de transporte: Encabezado TCP o UDP con puertos de origen/destino.
-- Capa de aplicación: Datos de la comunicación (HTTP, FTP, etc.).
-
-- Flags en TCP: Son indicadores en el encabezado que controlan el estado de la conexión, como SYN (inicio de conexión), ACK (confirmación) y FIN (cierre de conexión).
+Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen información como direcciones IP, puertos, números de secuencia y flags.
+-  Encabezado IP (Protocolo IP - Capa de Red): Proporciona las direcciones de origen y destino, así como información sobre cómo debe ser manejado el paquete en la red. Este encabezado es crucial para los routers, ya que les permite tomar decisiones basadas en la información contenida en él.
+- Encabezado TCP: contiene detalles como los puertos de origen y destino, el número de secuencia y la suma de verificación hash. Esta última es esencial para verificar la integridad del paquete.
+- Flags: Son indicadores en el encabezado que controlan el estado de la conexión, como SYN (inicio de conexión), ACK (confirmación) y FIN (cierre de conexión).
 
 **8. Tipos de redes según la geografía Las redes pueden clasificarse por su alcance geográfico:**
 - PAN (Personal Area Network): Para dispositivos personales, como Bluetooth.
