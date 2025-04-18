@@ -127,6 +127,34 @@ Switch: Conectar dispositivos en una red local y enviar los datos solo al destin
 **5- ¿Qué es un protocolo de comunicaciones?**
 Es un conjunto de reglas, que al respetarse permite que las redes puedan "hablar en el mismo idioma" y comunicarse entre sí. Un protocolo define restricciones, procedimientos y formatos que definen el intercambio de paquetes para lograr la comunicación entre 2 o más servidores.
 
+**6. TCP/IP y NetBIOS: Definición y diferencias**
+- TCP/IP (Transmission Control Protocol/Internet Protocol) es un conjunto de protocolos que permite la comunicación entre dispositivos en redes, incluyendo internet. Ofrece confiabilidad, corrección de errores y direccionamiento a través de direcciones IP.
+
+- NetBIOS (Network Basic Input/Output System) es una interfaz de comunicación utilizada en redes locales (LAN) para permitir la conexión entre equipos sin necesidad de direcciones IP, usando nombres de dispositivos.
+
+- Diferencias: TCP/IP es más robusto y escalable, funcionando en redes grandes, mientras que NetBIOS es más limitado y suele utilizarse en redes pequeñas sin enrutamiento externo.
+
+**7. Estructura de un paquete TCP/IP y los "flags"**
+- Un paquete TCP/IP consta de varias capas:
+- Capa de enlace de datos: Encabezado con dirección MAC.
+- Capa de red: Encabezado con dirección IP origen y destino.
+- Capa de transporte: Encabezado TCP o UDP con puertos de origen/destino.
+- Capa de aplicación: Datos de la comunicación (HTTP, FTP, etc.).
+
+- Flags en TCP: Son indicadores en el encabezado que controlan el estado de la conexión, como SYN (inicio de conexión), ACK (confirmación) y FIN (cierre de conexión).
+
+**8. Tipos de redes según la geografía Las redes pueden clasificarse por su alcance geográfico:**
+- PAN (Personal Area Network): Para dispositivos personales, como Bluetooth.
+- LAN (Local Area Network): Redes pequeñas, como las de hogares o empresas.
+- MAN (Metropolitan Area Network): Conectan ciudades o áreas grandes.
+- WAN (Wide Area Network): Redes globales, como internet.
+
+**9. Tipos de redes según la topología Las redes también se clasifican por su estructura de conexión:**
+- Red en estrella: Dispositivos conectados a un nodo central.
+- Red en bus: Todos los dispositivos comparten un único canal de comunicación.
+- Red en anillo: Cada dispositivo está conectado con el siguiente, formando un círculo.
+- Red en malla: Cada dispositivo tiene múltiples conexiones, ofreciendo redundancia.
+
 **10- Explicar el servicio de DHCP.**
 Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
 
