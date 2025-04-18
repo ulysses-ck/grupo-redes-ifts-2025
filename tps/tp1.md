@@ -174,6 +174,21 @@ Estandares:
 **13- ¿Qué es un Proxy?**
 Un proxy se trata de un servidor que recibe las peticiones de un usuario y este las traslada a otro servidor. Una VPN también funciona como un servidor proxy, solamente que está toma todo el tráfico entrante de un usuario, en vez de solamente algunas peticiones.
 
+**14- Explicar el protocolo Spanning tree.**
+El Spanning Tree Protocol (STP) es un protocolo de red de capa 2 (Enlace de Datos), que evita la formación de tramas duplicadas al detectar y bloquear automáticamente caminos redundantes que puedan generar bucles en una red de switches. STP asegura que haya un único camino activo entre dos dispositivos de red, creando una topología lógica libre de bucles (spanning tree), mientras mantiene la redundancia física disponible para recuperación ante fallos.
+
+**15- Explicar el protocolo de comunicaciones OSPF.**
+El protocolo OSPF (Open Shortest Path First) es un tipo de enrutamiento que ayuda a encontrar el mejor camino para que los datos viajen por una red. Para hacerlo, detecta cómo están conectados los routers cercanos, comparte esa información con ellos y, si hay varias rutas posibles hacia un destino, elige la más rápida o conveniente según ciertas reglas. Además, si la red cambia, OSPF actualiza las rutas automáticamente para que los datos siempre tomen el mejor camino disponible.
+
+**16- Explicar el protocolo ARP.**
+El protocolo ARP es un sistema que ayuda a conectar las direcciones IP, que pueden cambiar, con las direcciones físicas fijas de los dispositivos en una red local (LAN). Básicamente, convierte una dirección IP en la dirección MAC de un dispositivo para que los datos puedan llegar a su destino correctamente dentro de la red.
+
+**17- ¿Qué es un Firewall?**
+Un firewall es una herramienta de seguridad que controla qué datos pueden entrar o salir de una red o computadora. Actúa como una especie de "puerta" o "filtro" entre tu red y el resto de Internet, permitiendo solo el tráfico autorizado y bloqueando el que puede ser peligroso. 
+
+**18- ¿Qué es una DMZ?**
+Un firewall es una herramienta de seguridad que controla qué datos pueden entrar o salir de una red o computadora. Actúa como una especie de "puerta" o "filtro" entre tu red y el resto de Internet, permitiendo solo el tráfico autorizado y bloqueando el que puede ser peligroso. 
+
 **19- ¿Qué es un Gateway?**
 Una gateway o puerta de enlace es el dispositivo que conecta distintas redes. Su propósito es traducir la información del protocolo utilizado en una red de origen al protocolo usado en la red de destino. Si un dispositivo dentro de una red quiere comunicarse con otro que está fuera de esa misma red, se necesita una gateway. Hoy en día es muy común que las gateways se combinen con los enrutadores, por lo que muchas veces se puede hablar de una gateway refiriéndose a un enrutador. Un ejemplo muy común de esta combinación es el router que te instalan cuando contratás un servicio de internet en tu casa: este utiliza una gateway para conectar los dispositivos de la red local con redes externas, como internet.
 
