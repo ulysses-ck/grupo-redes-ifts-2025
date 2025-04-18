@@ -155,6 +155,22 @@ Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen info
 **10- Explicar el servicio de DHCP.**
 Un servicio de DHCP es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
 
+**11- Explicar el servicio de DNS.**
+El DNS (Sistema de Nombres de Dominio), traduce los nombres de dominios aptos para lectura humana (por ejemplo, www.amazon.com) a direcciones IP aptas para lectura por parte de máquinas (por ejemplo, 192.0.2.44).
+Esto permite a los usuarios acceder a sitios web utilizando nombres fáciles de recordar, en lugar de tener que recordar direcciones IP numéricas. 
+
+**12- Explicar las tecnologías Wireless, y sus estándares.**
+"Wireless", o comunicación inalámbrica , describe la transmisión de datos entre dispositivos utilizando ondas de radio u otras ondas electromagnéticas, eliminando por completo la necesidad de cables para la comunicacion de los mismo.
+Estandares:
+- IEEE 802.11: Estándar para redes de área local inalámbricas (WLAN), conocido como Wi-Fi. Permite la conexión de dispositivos dentro de un área limitada, como hogares u oficinas, usando ondas de radio en las bandas de 2.4 GHz y 5 GHz, y en versiones más recientes también 6 GHz (Wi-Fi 6E).
+
+- IEEE 802.15: Estándar para redes de área personal inalámbricas (WPAN). Incluye tecnologías como Bluetooth, que permite la comunicación entre dispositivos personales mediante un proceso de emparejamiento, con un alcance típico entre 1 y 100 metros, y ZigBee, usada en aplicaciones de bajo consumo como domótica e IoT.
+
+- IEEE 802.16: Estándar para redes metropolitanas inalámbricas (WMAN), conocido como WiMAX (Interoperabilidad Mundial para Acceso por Microondas). Utiliza una topología punto a multipunto para ofrecer acceso de banda ancha inalámbrico sobre grandes distancias, ideal para zonas rurales o sin infraestructura cableada.
+
+- GSM (Sistema Global para Comunicaciones Móviles): Estándar de comunicaciones móviles de segunda generación (2G). Incluye especificaciones de la capa física que permiten la implementación del protocolo GPRS (Servicio General de Radio por Paquetes) para la transmisión de datos sobre redes de telefonía celular.
+
+
 **13- ¿Qué es un Proxy?**
 Un proxy se trata de un servidor que recibe las peticiones de un usuario y este las traslada a otro servidor. Una VPN también funciona como un servidor proxy, solamente que está toma todo el tráfico entrante de un usuario, en vez de solamente algunas peticiones.
 
