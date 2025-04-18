@@ -134,11 +134,28 @@ Es un conjunto de reglas, que al respetarse permite que las redes puedan "hablar
 
 - Diferencias: TCP/IP es más robusto y escalable, funcionando en redes grandes, mientras que NetBIOS es más limitado y suele utilizarse en redes pequeñas sin enrutamiento externo.
 
-**7. Estructura de un paquete TCP/IP y los "flags"**
-Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen información como direcciones IP, puertos, números de secuencia y flags.
--  Encabezado IP (Protocolo IP - Capa de Red): Proporciona las direcciones de origen y destino, así como información sobre cómo debe ser manejado el paquete en la red. Este encabezado es crucial para los routers, ya que les permite tomar decisiones basadas en la información contenida en él.
-- Encabezado TCP: contiene detalles como los puertos de origen y destino, el número de secuencia y la suma de verificación hash. Basicamente se encarga de dividir los datos en partes más pequeñas, numerarlas y asegurarse de que lleguen completas y en orden.
-- Flags: Son indicadores en el encabezado que controlan el estado de la conexión, como SYN (inicio de conexión), ACK (confirmación) y FIN (cierre de conexión).
+### 7. Estructura de un paquete TCP/IP y los "flags"
+
+Un paquete TCP/IP se compone de los siguientes encabezados:
+
+#### Encabezado IP (Protocolo IP - Capa de Red)
+
+* Contiene las direcciones IP de origen y destino
+* Información sobre cómo debe ser manejado el paquete en la red
+* Crucial para los routers, ya que les permite tomar decisiones basadas en la información contenida en él
+
+#### Encabezado TCP
+
+* Contiene detalles como los puertos de origen y destino
+* Número de secuencia y suma de verificación hash
+* Divide los datos en partes más pequeñas, las numera y se asegura de que lleguen completas y en orden
+
+#### Flags
+
+* Indicadores en el encabezado que controlan el estado de la conexión
+* SYN (inicio de conexión)
+* ACK (confirmación)
+* FIN (cierre de conexión)
 
 **8. Tipos de redes según la geografía Las redes pueden clasificarse por su alcance geográfico:**
 - PAN (Personal Area Network): Para dispositivos personales, como Bluetooth.
