@@ -201,6 +201,28 @@ LTE puede alcanzar hasta 100 Mbps de descarga y 50 Mbps de carga. Está basada e
 Además, tiene soporte de voz (VoLTE), lo que mejora la calidad de las llamadas de voz y permite realizar llamadas y navegar por Internet de manera simultánea.
 LTE fue fundamental para el avance de la tecnología móvil, ya que no solo permite un acceso más rápido a Internet, sino que también soporta aplicaciones avanzadas como streaming, realidad aumentada e IoT. También facilita la transición hacia la tecnología 5G.
 
+**25- ¿Qué diferencias puede encontrar entre una conexión Coaxial, UTP o Fibra?**
+Coaxial
+Velocidad: Hasta 1 Gbps.
+Alcance: Medio. A medida que el tramo se alarga, se pierde calidad y velocidad.
+Interferencias: Resistente a interferencias externas.
+Costo: Medio.
+Uso principal: Aún se utiliza bastante para televisión por cable, servicios de internet y redes telefónicas interurbanas.
+
+UTP
+Velocidad: Hasta 40 Gbps en categoría Cat8.
+Alcance: Bajo. Para alcanzar los 40 Gbps (Cat8), el tramo debe ser de hasta 15 metros como máximo.
+Interferencias: Más vulnerable a interferencias electromagnéticas.
+Costo: Bajo.
+Uso principal: Muy utilizado en redes LAN, conexiones telefónicas y sistemas de cámaras de seguridad.
+
+Fibra
+Velocidad: Puede alcanzar velocidades del orden de los Tbps.
+Alcance: Alto. Permite transmitir datos a varios kilómetros sin pérdidas significativas.
+Interferencias: Inmune a interferencias electromagnéticas (transmite mediante luz, no electricidad).
+Costo: Alto, aunque tiende a reducirse con el tiempo.
+Uso principal: Se emplea en cables submarinos, sistemas de audio óptico y para ofrecer internet de alta velocidad tanto en hogares como en empresas. 
+
 **31- ¿Qué protocolos se usan para enviar y recibir correo?**
 Los protocolos que se usan para enviar y recibir correo son: SMTP(Simple Mail Transfer Protocol), POP3(Post Office Protocol Version 3)
 
