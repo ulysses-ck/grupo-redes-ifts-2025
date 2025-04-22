@@ -201,5 +201,23 @@ Los protocolos que se usan para enviar y recibir correo son: SMTP(Simple Mail Tr
 **32- ¿Qué protocolo puede usarse para leer correo recibido?** 
 El protocolo que puede usarse para leer correo recibido es el POP3
 
+**33- Diferencias entre IPV4 e IPV6**
+IPV4:
+Lanzamiento: 1981
+Tamaño de direcciones: 32 bits
+Formato de la IP: Notación decimal con puntos (ej: 192.168.0.1)
+Cantidad de IPs: 2³² = 4 mil millones
+Tamaño de paquete mínimo requerido: 576 bytes
+Configuracion: DHCP o manual
+Observaciones: Se reutilizan direcciones IP. Tiene rangos reservados para uso privado, loopback, broadcast y red.
+IPV6:
+Lanzamiento: 1999
+Tamaño de direcciones: 128 bits
+Formato de la IP: Notación hexadecimal, separada por dos puntos (ej: 2001:0db8:85a3::8a2e:0370:7334)
+Cantidad de IPs: 2¹²⁸ = 340 undecillones
+Tamaño de paquete mínimo requerido: 1.280 bytes
+Configuracion: Permite configuración automática sin necesidad de DHCP
+Observaciones: Está diseñado para que nunca falten direcciones. Cada persona podría tener trillones de IPs sin problema.
+
 **34- (Individual para cada integrante del grupo) ¿Qué experiencia tienen en redes?**
 Ulises: He configurado una aplicación para producción usando Nginx, creando un subdominio en los registros de DNS con un CNAME y asignando los Certificados con Let's Encrypt.
