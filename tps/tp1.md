@@ -201,6 +201,9 @@ LTE puede alcanzar hasta 100 Mbps de descarga y 50 Mbps de carga. Está basada e
 Además, tiene soporte de voz (VoLTE), lo que mejora la calidad de las llamadas de voz y permite realizar llamadas y navegar por Internet de manera simultánea.
 LTE fue fundamental para el avance de la tecnología móvil, ya que no solo permite un acceso más rápido a Internet, sino que también soporta aplicaciones avanzadas como streaming, realidad aumentada e IoT. También facilita la transición hacia la tecnología 5G.
 
+**24- ¿Qué significa aplicar calidad en un enlace MPLS?**
+Aplicar calidad significa definir y garantizar un nivel de tráfico suficiente y aplicar mecanismos para asegurar que el tráfico de la red se transmita de forma eficiente. Esto se hace mediante QoS (Quality of Service). De esta manera, clasificás el tráfico, priorizás lo que necesita menor latencia, reservás una parte mínima de ancho de banda para ciertos tipos de tráfico crítico, aplicás políticas para evitar saturaciones y se usan técnicas para manejar el retardo y la pérdida de paquetes. Eso es aplicar calidad en un enlace MPLS, y todo esto sirve para mejorar la experiencia del usuario, garantizar el funcionamiento de servicios críticos y optimizar el uso del enlace MPLS.
+
 **25- ¿Qué diferencias puede encontrar entre una conexión Coaxial, UTP o Fibra?**
 Coaxial
 Velocidad: Hasta 1 Gbps.
