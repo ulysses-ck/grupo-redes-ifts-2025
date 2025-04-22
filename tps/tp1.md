@@ -221,3 +221,4 @@ Observaciones: Está diseñado para que nunca falten direcciones. Cada persona p
 
 **34- (Individual para cada integrante del grupo) ¿Qué experiencia tienen en redes?**
 Ulises: He configurado una aplicación para producción usando Nginx, creando un subdominio en los registros de DNS con un CNAME y asignando los Certificados con Let's Encrypt.
+Nicolas: Configuré varios repetidores de manera inalámbrica y hace poco conecté un repetidor mediante cable Ethernet que tuve que configurar el repetidor para que no asignara direcciones IP, sino que las asignara solo el router principal. Recientemente, ingresé al panel de configuración de mi router para cambiar la contraseña.
