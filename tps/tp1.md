@@ -195,6 +195,12 @@ Una gateway o puerta de enlace es el dispositivo que conecta distintas redes. Su
 **20- Según Microsoft, ¿qué significa NLB?**
 NLB significa Network Load Balancing o en español, equilibrio de carga de red. Es una función de Windows Server que sirve para distribuir y equilibrar el tráfico de red entre varios servidores como si fueran uno solo, mejorando así la disponibilidad y la escalabilidad.
 
+**22- Describir la tecnología LTE.**
+Long Term Evolution (LTE) es un estándar de comunicación inalámbrica de cuarta generación (4G) que ofrece velocidades de datos más rápidas y menor latencia que tecnologías anteriores como 3G, es entre 5 y 10 veces más rápido que 3G.
+LTE puede alcanzar hasta 100 Mbps de descarga y 50 Mbps de carga. Está basada en el protocolo IP, lo que facilita la transmisión de datos, voz y video de forma más eficiente, en lugar de utilizar sistemas de conmutación por circuitos como en generaciones anteriores(3G Y 2G).
+Además, tiene soporte de voz (VoLTE), lo que mejora la calidad de las llamadas de voz y permite realizar llamadas y navegar por Internet de manera simultánea.
+LTE fue fundamental para el avance de la tecnología móvil, ya que no solo permite un acceso más rápido a Internet, sino que también soporta aplicaciones avanzadas como streaming, realidad aumentada e IoT. También facilita la transición hacia la tecnología 5G.
+
 **31- ¿Qué protocolos se usan para enviar y recibir correo?**
 Los protocolos que se usan para enviar y recibir correo son: SMTP(Simple Mail Transfer Protocol), POP3(Post Office Protocol Version 3)
 
