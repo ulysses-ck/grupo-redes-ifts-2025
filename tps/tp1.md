@@ -85,7 +85,7 @@ desventajas.
 
 32- ¿Qué protocolo puede usarse para leer correo recibido?
 
-33- Diferencias entre IPV4 e IPV
+33- Diferencias entre IPV4 e IPV6
 
 34- (Individual para cada integrante del grupo) ¿Qué experiencia tienen en redes?
 Ejemplos.: Accedo y configuro el router de mi casa como admin, en mi trabajo hago
@@ -191,6 +191,9 @@ Una DMZ (Zona Desmilitarizada) en un área separada dentro de una red donde se c
 
 **19- ¿Qué es un Gateway?**
 Una gateway o puerta de enlace es el dispositivo que conecta distintas redes. Su propósito es traducir la información del protocolo utilizado en una red de origen al protocolo usado en la red de destino. Si un dispositivo dentro de una red quiere comunicarse con otro que está fuera de esa misma red, se necesita una gateway. Hoy en día es muy común que las gateways se combinen con los enrutadores, por lo que muchas veces se puede hablar de una gateway refiriéndose a un enrutador. Un ejemplo muy común de esta combinación es el router que te instalan cuando contratás un servicio de internet en tu casa: este utiliza una gateway para conectar los dispositivos de la red local con redes externas, como internet.
+
+**20- Según Microsoft, ¿qué significa NLB?**
+NLB significa Network Load Balancing o en español, equilibrio de carga de red. Es una función de Windows Server que sirve para distribuir y equilibrar el tráfico de red entre varios servidores como si fueran uno solo, mejorando así la disponibilidad y la escalabilidad.
 
 **31- ¿Qué protocolos se usan para enviar y recibir correo?**
 Los protocolos que se usan para enviar y recibir correo son: SMTP(Simple Mail Transfer Protocol), POP3(Post Office Protocol Version 3)
