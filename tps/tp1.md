@@ -988,4 +988,6 @@ graph LR
 
 **Nicolas**: Configuré varios repetidores de manera inalámbrica y hace poco conecté un repetidor mediante cable Ethernet que tuve que configurar el repetidor para que no asignara direcciones IP, sino que las asignara solo el router principal. Recientemente, ingresé al panel de configuración de mi router para cambiar la contraseña.
 
-**Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica. 
+**Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica.  
+
+**Gabriel**: No tengo experiencia.
