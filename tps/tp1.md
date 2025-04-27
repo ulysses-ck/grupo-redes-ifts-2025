@@ -318,6 +318,9 @@ Las redes también se clasifican por su estructura de conexión:
 - **Red en bus**: Todos los dispositivos comparten un único canal de comunicación. 🚌
 - **Red en anillo**: Cada dispositivo está conectado con el siguiente, formando un círculo. 🔵
 - **Red en malla**: Cada dispositivo tiene múltiples conexiones, ofreciendo redundancia. 🔗
+- **Punto a punto**: Un enlace directo entre dos dispositivos. ↔️
+- **Red en árbol**: Una red con nodos que se ramifican como un árbol. 🌳
+- **Red híbrida**: Una combinación de diferentes topologías. 🔀
 
 ```mermaid
 graph TD
