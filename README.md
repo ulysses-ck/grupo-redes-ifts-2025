@@ -6,3 +6,6 @@ Este es el repositorio que contiene las prácticas para la materia de Programaci
 - Gabriel Aguirre
 - Agustin Lazarte
 - Ulises Apaza
+
+## Trabajos Prácticos
+- [TP1 - Programación sobre Redes](tps/tp1.md)
