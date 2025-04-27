@@ -779,8 +779,18 @@ graph TB
 # **🤓 28- Realizar cuestionario online y copiar el resultado: (1 por cada integrante)**
 Nicolas:
 ![Puntuacion-Nicolas](28-puntuacion/puntuacion-nico.png)
+
+---
+
 Ulises:  
-![Puntuacion-Ulises](28-puntuacion/puntuacion-ulises.png)
+![Puntuacion-Ulises](28-puntuacion/puntuacion-ulises.png)  
+
+---
+
+
+Agustin:  
+![Puntuacion-Agustib](28-puntuacion/puntuacion-agustin.jpg)
+
 ---
 
 # 📡 **29- Explicar el estándar IEEE 802.3 regula la red. Cómo se implementa, ventajas y desventajas.**
