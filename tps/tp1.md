@@ -133,10 +133,10 @@ graph TD
         Server2
     end
 
-    classDef vlan10 fill:#ff9999,stroke:#333,stroke-width:2px;
-    classDef vlan20 fill:#99ff99,stroke:#333,stroke-width:2px;
-    class PC1,PC2,Server1 vlan10;
-    class PC3,PC4,Server2 vlan20;
+    classDef vlan10 fill:#FF4444,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef vlan20 fill:#44AA44,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    class PC1,PC2,Server1 vlan10
+    class PC3,PC4,Server2 vlan20
 ```
 
 ---
@@ -248,7 +248,7 @@ Las redes también se clasifican por su estructura de conexión:
 
 ```mermaid
 graph TD
-    subgraph "Star Topology"
+    subgraph Star Topology
         S_Central((Central))
         S_Node1[Node 1]
         S_Node2[Node 2]
@@ -258,7 +258,7 @@ graph TD
         S_Central --- S_Node3
     end
 
-    subgraph "Ring Topology"
+    subgraph Ring Topology
         R_Node1[Node 1]
         R_Node2[Node 2]
         R_Node3[Node 3]
@@ -343,10 +343,10 @@ graph LR
     Firewall1 --- Firewall2
     Firewall2 --- Internal
 
-    classDef secure fill:#90EE90
-    classDef danger fill:#FFB6C1
+    classDef secure fill:#44AA44,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef danger fill:#FF4444,stroke:#000000,stroke-width:2px,color:#FFFFFF
     class Internet danger
-    class Internal,Server1,Server2 secure
+    class Internal,WebServer,MailServer secure
 ```
 
 ---
@@ -452,6 +452,7 @@ Los profesionales deben ser capaces de:
 El **Modelo OSI** (Open Systems Interconnection) es un marco de referencia que estandariza las funciones de comunicación en redes de computadoras en **siete capas**, facilitando la interconexión entre diferentes sistemas. 
 
 Las capas son:
+
 1. **Capa Física**: Transmite datos en forma de bits a través de medios físicos. 🔌
 2. **Capa de Enlace de Datos**: Proporciona la transferencia de datos entre nodos en la misma red y maneja errores de transmisión. 📡
 3. **Capa de Red**: Se encarga del enrutamiento de datos entre diferentes redes y gestiona direcciones IP. 🌍
@@ -477,9 +478,9 @@ graph TD
     L3 --- L2
     L2 --- L1
 
-    classDef upper fill:#FFB6C1
-    classDef middle fill:#90EE90
-    classDef lower fill:#87CEEB
+    classDef upper fill:#FF4444,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef middle fill:#44AA44,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef lower fill:#4444FF,stroke:#000000,stroke-width:2px,color:#FFFFFF
     class L7,L6,L5 upper
     class L4,L3 middle
     class L2,L1 lower
