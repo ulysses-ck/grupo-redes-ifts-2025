@@ -149,6 +149,34 @@ Una **VPN** (Virtual Private Network) te permite utilizar una IP diferente frent
 
 En IT, se utiliza generalmente para el **trabajo remoto** 🏠.
 
+```mermaid
+graph LR
+    subgraph "Red Local"
+        PC[Usuario<br/>IP Local]
+    end
+    
+    subgraph "Túnel VPN Cifrado"
+        VPN{Servidor VPN<br/>Cifrado}
+    end
+    
+    subgraph "Internet"
+        Web1[Sitio Web 1]
+        Web2[Sitio Web 2]
+        Web3[Sitio Web 3]
+    end
+    
+    PC -->|"Tráfico<br/>Cifrado"| VPN
+    VPN -->|"IP Virtual"| Web1
+    VPN -->|"IP Virtual"| Web2
+    VPN -->|"IP Virtual"| Web3
+    
+    style PC fill:#99ff99,stroke:#333,stroke-width:2px
+    style VPN fill:#ff9999,stroke:#333,stroke-width:2px
+    style Web1 fill:#9999ff,stroke:#333,stroke-width:2px
+    style Web2 fill:#9999ff,stroke:#333,stroke-width:2px
+    style Web3 fill:#9999ff,stroke:#333,stroke-width:2px
+```
+
 ---
 
 # 💾 **3- ¿Qué es una SAN?**
@@ -157,8 +185,48 @@ Una **SAN** (Storage Area Network) es una red especializada para acceder a dispo
 - **Switches**
 - **Elementos de almacenamiento** interconectados usando diversas topologías y protocolos.
 
----
+```mermaid
+graph TD
+    subgraph "Servidores"
+        S1[Servidor 1]
+        S2[Servidor 2]
+        S3[Servidor 3]
+    end
+    
+    subgraph "Red SAN"
+        SW1[Switch FC 1]
+        SW2[Switch FC 2]
+    end
+    
+    subgraph "Almacenamiento"
+        ST1[(Array de Discos 1)]
+        ST2[(Array de Discos 2)]
+        ST3[(Biblioteca de Cintas)]
+    end
+    
+    S1 -->|"Fibra Canal"| SW1
+    S2 -->|"Fibra Canal"| SW1
+    S2 -->|"Fibra Canal"| SW2
+    S3 -->|"Fibra Canal"| SW2
+    
+    SW1 --- SW2
+    
+    SW1 -->|"Fibra Canal"| ST1
+    SW1 -->|"Fibra Canal"| ST2
+    SW2 -->|"Fibra Canal"| ST2
+    SW2 -->|"Fibra Canal"| ST3
+    
+    style S1 fill:#99ff99,stroke:#333,stroke-width:2px
+    style S2 fill:#99ff99,stroke:#333,stroke-width:2px
+    style S3 fill:#99ff99,stroke:#333,stroke-width:2px
+    style SW1 fill:#ff9999,stroke:#333,stroke-width:2px
+    style SW2 fill:#ff9999,stroke:#333,stroke-width:2px
+    style ST1 fill:#9999ff,stroke:#333,stroke-width:2px
+    style ST2 fill:#9999ff,stroke:#333,stroke-width:2px
+    style ST3 fill:#9999ff,stroke:#333,stroke-width:2px
+```
 
+---
 # 🔄 **4- Diferencias entre un Hub, Repetidor, Router y SWITCH. Explicar las diferencias.**
 - **Hub**: Conecta varios dispositivos en una red y transmite datos a todos ellos. No distingue a dónde va la información, envía todo a todos. 🖥️
   
