@@ -286,29 +286,70 @@ Un servicio de **DHCP** es el cual se utiliza para asignar una IP a un dispositi
 
 ```mermaid
 sequenceDiagram
-    participant Client
-    participant DHCP Server
-    Client->>DHCP Server: DHCP Discover
-    DHCP Server->>Client: DHCP Offer
-    Client->>DHCP Server: DHCP Request
-    DHCP Server->>Client: DHCP Acknowledge
+    participant Cliente
+    participant DHCP
+    
+    Cliente->>DHCP: DHCP Discover (Broadcast)
+    DHCP->>Cliente: DHCP Offer (IP propuesta)
+    Cliente->>DHCP: DHCP Request (Acepta IP)
+    DHCP->>Cliente: DHCP ACK (Confirma asignación)
+    
+    Note over Cliente,DHCP: El proceso se conoce como DORA<br/>(Discover, Offer, Request, Acknowledge)
 ```
 
 # 🌐 **11- Explicar el servicio de DNS.**
 El **DNS** (Sistema de Nombres de Dominio) traduce los nombres de dominios aptos para lectura humana (por ejemplo, www.amazon.com) a direcciones IP aptas para lectura por parte de máquinas (por ejemplo, 192.0.2.44). 
 Esto permite a los usuarios acceder a sitios web utilizando nombres fáciles de recordar, en lugar de tener que recordar direcciones IP numéricas. 🌍
 
+```mermaid
 sequenceDiagram
-    participant Client
-    participant DNS
-    participant Website
-    Client->>DNS: Query: www.example.com
-    DNS->>Client: Response: 93.184.216.34
-    Client->>Website: HTTP Request
+    participant Usuario
+    participant DNS_Local
+    participant DNS_Root
+    participant DNS_TLD
+    participant DNS_Autoritativo
+    
+    Usuario->>DNS_Local: Consulta: www.ejemplo.com
+    DNS_Local->>DNS_Root: Consulta por .com
+    DNS_Root->>DNS_Local: Servidor TLD para .com
+    DNS_Local->>DNS_TLD: Consulta por ejemplo.com
+    DNS_TLD->>DNS_Local: Servidor NS para ejemplo.com
+    DNS_Local->>DNS_Autoritativo: Consulta www.ejemplo.com
+    DNS_Autoritativo->>DNS_Local: IP: 93.184.216.34
+    DNS_Local->>Usuario: IP: 93.184.216.34
+    
+    Note over Usuario,DNS_Autoritativo: Proceso de resolución DNS jerárquica
+```
 
 ---
 # 📡 **12- Explicar las tecnologías Wireless, y sus estándares.**
 "**Wireless**", o comunicación inalámbrica, describe la transmisión de datos entre dispositivos utilizando ondas de radio u otras ondas electromagnéticas, eliminando por completo la necesidad de cables para la comunicación de los mismos.
+
+```mermaid
+graph TD
+    subgraph "Estándares Wireless"
+        WiFi["WiFi (802.11)<br/>2.4GHz, 5GHz, 6GHz"]
+        BT["Bluetooth (802.15)<br/>2.4GHz"]
+        ZB["ZigBee<br/>IoT/Domótica"]
+        WiMAX["WiMAX (802.16)<br/>Banda Ancha"]
+    end
+    
+    subgraph "Alcances Típicos"
+        PAN["PAN<br/><10m"]
+        LAN["LAN<br/>~100m"]
+        MAN["MAN<br/>~50km"]
+    end
+    
+    WiFi --> LAN
+    BT --> PAN
+    ZB --> PAN
+    WiMAX --> MAN
+    
+    style WiFi fill:#ff9999
+    style BT fill:#9999ff
+    style ZB fill:#99ff99
+    style WiMAX fill:#ffff99
+```
 
 ### Estándares:
 - **IEEE 802.11**: Estándar para redes de área local inalámbricas (WLAN), conocido como **Wi-Fi**. Permite la conexión de dispositivos dentro de un área limitada, como hogares u oficinas, usando ondas de radio en las bandas de 2.4 GHz y 5 GHz, y en versiones más recientes también 6 GHz (Wi-Fi 6E). 📶
@@ -329,16 +370,88 @@ Un **proxy** es un servidor que recibe las peticiones de un usuario y las trasla
 El **Spanning Tree Protocol (STP)** es un protocolo de red de capa 2 (Enlace de Datos) que evita la formación de tramas duplicadas al detectar y bloquear automáticamente caminos redundantes que puedan generar bucles en una red de switches. 
 STP asegura que haya un único camino activo entre dos dispositivos de red, creando una topología lógica libre de bucles (spanning tree), mientras mantiene la redundancia física disponible para recuperación ante fallos. 🔄
 
+```mermaid
+graph TD
+    Root((Switch Raíz<br/>Prioridad: 4096))
+    SW1{Switch 1<br/>Prioridad: 8192}
+    SW2{Switch 2<br/>Prioridad: 8192}
+    SW3{Switch 3<br/>Prioridad: 8192}
+    
+    Root ---|"Activo"| SW1
+    Root ---|"Activo"| SW2
+    SW1 ---|"Bloqueado"| SW2
+    SW2 ---|"Activo"| SW3
+    SW1 ---|"Activo"| SW3
+    
+    style Root fill:#ff9999,stroke:#333,stroke-width:4px
+    style SW1 fill:#99ff99,stroke:#333,stroke-width:2px
+    style SW2 fill:#99ff99,stroke:#333,stroke-width:2px
+    style SW3 fill:#99ff99,stroke:#333,stroke-width:2px
+    
+    Note over Root,SW3: Las líneas continuas representan enlaces activos<br/>Las líneas punteadas representan enlaces bloqueados
+```
+
 ---
 # 🛣️ **15- Explicar el protocolo de comunicaciones OSPF.**
 El protocolo **OSPF** (Open Shortest Path First) es un tipo de enrutamiento que ayuda a encontrar el mejor camino para que los datos viajen por una red. 
 Para hacerlo, detecta cómo están conectados los routers cercanos, comparte esa información con ellos y, si hay varias rutas posibles hacia un destino, elige la más rápida o conveniente según ciertas reglas. 
 Además, si la red cambia, OSPF actualiza las rutas automáticamente para que los datos siempre tomen el mejor camino disponible. 🚀
 
+```mermaid
+graph TD
+    subgraph "Área OSPF 0 (Backbone)"
+        R1((Router 1))
+        R2((Router 2))
+        R3((Router 3))
+    end
+    
+    subgraph "Área OSPF 1"
+        R4((Router 4))
+        R5((Router 5))
+    end
+    
+    subgraph "Área OSPF 2"
+        R6((Router 6))
+        R7((Router 7))
+    end
+    
+    R1 ---|"Costo: 10"| R2
+    R2 ---|"Costo: 10"| R3
+    R1 ---|"Costo: 20"| R3
+    R2 ---|"Costo: 5"| R4
+    R4 ---|"Costo: 5"| R5
+    R3 ---|"Costo: 5"| R6
+    R6 ---|"Costo: 5"| R7
+    
+    style R1 fill:#ff9999,stroke:#333,stroke-width:2px
+    style R2 fill:#ff9999,stroke:#333,stroke-width:2px
+    style R3 fill:#ff9999,stroke:#333,stroke-width:2px
+    style R4 fill:#99ff99,stroke:#333,stroke-width:2px
+    style R5 fill:#99ff99,stroke:#333,stroke-width:2px
+    style R6 fill:#9999ff,stroke:#333,stroke-width:2px
+    style R7 fill:#9999ff,stroke:#333,stroke-width:2px
+```
+
 ---
 # 🔗 **16- Explicar el protocolo ARP.**
 El protocolo **ARP** (Address Resolution Protocol) es un sistema que ayuda a conectar las direcciones IP, que pueden cambiar, con las direcciones físicas fijas de los dispositivos en una red local (LAN). 
 Básicamente, convierte una dirección IP en la dirección **MAC** de un dispositivo para que los datos puedan llegar a su destino correctamente dentro de la red. 📡
+
+```mermaid
+sequenceDiagram
+    participant PC1 as "PC1 (IP: 192.168.1.10)"
+    participant Red as "Red Local"
+    participant PC2 as "PC2 (IP: 192.168.1.20)"
+    
+    Note over PC1,PC2: PC1 quiere enviar datos a PC2<br/>pero no conoce su MAC
+    
+    PC1->>Red: ¿Quién tiene IP 192.168.1.20?<br/>(ARP Request - Broadcast)
+    PC2->>PC1: Yo tengo esa IP<br/>Mi MAC es 00:1A:2B:3C:4D:5E<br/>(ARP Reply)
+    
+    Note over PC1,PC2: PC1 guarda la relación IP-MAC<br/>en su caché ARP
+    
+    PC1->>PC2: Datos (usando la MAC obtenida)
+```
 
 ---
 
@@ -526,6 +639,37 @@ Los profesionales deben ser capaces de:
 # 🌐 **27- Explique el modelo OSI.**
 El **Modelo OSI** (Open Systems Interconnection) es un marco de referencia que estandariza las funciones de comunicación en redes de computadoras en **siete capas**, facilitando la interconexión entre diferentes sistemas. 
 
+```mermaid
+graph TB
+    subgraph "Capas de Host"
+        A[7. Aplicación<br/>HTTP, FTP, SMTP]
+        B[6. Presentación<br/>SSL, TLS]
+        C[5. Sesión<br/>NetBIOS, RPC]
+        D[4. Transporte<br/>TCP, UDP]
+    end
+    
+    subgraph "Capas de Red"
+        E[3. Red<br/>IP, ICMP]
+        F[2. Enlace de Datos<br/>Ethernet, WiFi]
+        G[1. Física<br/>Cables, Señales]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    
+    style A fill:#ff9999,stroke:#333,stroke-width:2px
+    style B fill:#ff9999,stroke:#333,stroke-width:2px
+    style C fill:#ff9999,stroke:#333,stroke-width:2px
+    style D fill:#99ff99,stroke:#333,stroke-width:2px
+    style E fill:#99ff99,stroke:#333,stroke-width:2px
+    style F fill:#9999ff,stroke:#333,stroke-width:2px
+    style G fill:#9999ff,stroke:#333,stroke-width:2px
+```
+
 Las capas son:
 
 1. **Capa Física**: Transmite datos en forma de bits a través de medios físicos. 🔌
@@ -565,6 +709,50 @@ graph TB
 ---
 # 📡 **29- Explicar el estándar IEEE 802.3 regula la red. Cómo se implementa, ventajas y desventajas.**
 **IEEE 802.3**: Es un estándar que regula las redes **Ethernet**, definiendo las especificaciones para la transmisión de datos en redes de área local (LAN) mediante cables.
+
+```mermaid
+graph TD
+    subgraph "Ethernet IEEE 802.3"
+        subgraph "Velocidades"
+            E1[10BASE-T<br/>10 Mbps]
+            E2[100BASE-TX<br/>100 Mbps]
+            E3[1000BASE-T<br/>1 Gbps]
+            E4[10GBASE-T<br/>10 Gbps]
+        end
+        
+        subgraph "Medios"
+            M1[Par Trenzado<br/>Cat5e/Cat6]
+            M2[Fibra Óptica<br/>Monomodo/Multimodo]
+        end
+        
+        subgraph "Distancias Máximas"
+            D1[Par Trenzado<br/>100m]
+            D2[Fibra MM<br/>550m]
+            D3[Fibra SM<br/>10km+]
+        end
+    end
+    
+    E1 --> M1
+    E2 --> M1
+    E3 --> M1
+    E4 --> M1
+    E3 --> M2
+    E4 --> M2
+    
+    M1 --> D1
+    M2 --> D2
+    M2 --> D3
+    
+    style E1 fill:#ff9999,stroke:#333,stroke-width:2px
+    style E2 fill:#ff9999,stroke:#333,stroke-width:2px
+    style E3 fill:#ff9999,stroke:#333,stroke-width:2px
+    style E4 fill:#ff9999,stroke:#333,stroke-width:2px
+    style M1 fill:#99ff99,stroke:#333,stroke-width:2px
+    style M2 fill:#99ff99,stroke:#333,stroke-width:2px
+    style D1 fill:#9999ff,stroke:#333,stroke-width:2px
+    style D2 fill:#9999ff,stroke:#333,stroke-width:2px
+    style D3 fill:#9999ff,stroke:#333,stroke-width:2px
+```
 
 ### Implementación
 Se implementa a través de dispositivos como switches y routers que utilizan cables de par trenzado o fibra óptica para conectar computadoras y otros dispositivos en una red. 🔗
