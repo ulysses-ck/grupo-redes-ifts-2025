@@ -133,8 +133,8 @@ graph TD
         Server2
     end
 
-    classDef vlan10 fill:#FF4444,stroke:#000000,stroke-width:2px,color:#FFFFFF
-    classDef vlan20 fill:#44AA44,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef vlan10 fill:#e74c3c,stroke:#000000,stroke-width:2px,color:#FFFFFF
+    classDef vlan20 fill:#27ae60,stroke:#000000,stroke-width:2px,color:#FFFFFF
     class PC1,PC2,Server1 vlan10
     class PC3,PC4,Server2 vlan20
 ```
@@ -170,11 +170,11 @@ graph LR
     VPN -->|"IP Virtual"| Web2
     VPN -->|"IP Virtual"| Web3
     
-    style PC fill:#99ff99,stroke:#333,stroke-width:2px
-    style VPN fill:#ff9999,stroke:#333,stroke-width:2px
-    style Web1 fill:#9999ff,stroke:#333,stroke-width:2px
-    style Web2 fill:#9999ff,stroke:#333,stroke-width:2px
-    style Web3 fill:#9999ff,stroke:#333,stroke-width:2px
+    style PC fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style VPN fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style Web1 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style Web2 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style Web3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 ---
@@ -216,14 +216,14 @@ graph TD
     SW2 -->|"Fibra Canal"| ST2
     SW2 -->|"Fibra Canal"| ST3
     
-    style S1 fill:#99ff99,stroke:#333,stroke-width:2px
-    style S2 fill:#99ff99,stroke:#333,stroke-width:2px
-    style S3 fill:#99ff99,stroke:#333,stroke-width:2px
-    style SW1 fill:#ff9999,stroke:#333,stroke-width:2px
-    style SW2 fill:#ff9999,stroke:#333,stroke-width:2px
-    style ST1 fill:#9999ff,stroke:#333,stroke-width:2px
-    style ST2 fill:#9999ff,stroke:#333,stroke-width:2px
-    style ST3 fill:#9999ff,stroke:#333,stroke-width:2px
+    style S1 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style S2 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style S3 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style SW1 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style SW2 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style ST1 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style ST2 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style ST3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 ---
@@ -413,10 +413,10 @@ graph TD
     ZB --> PAN
     WiMAX --> MAN
     
-    style WiFi fill:#ff9999
-    style BT fill:#9999ff
-    style ZB fill:#99ff99
-    style WiMAX fill:#ffff99
+    style WiFi fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style BT fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style ZB fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style WiMAX fill:#f1c40f,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 ### Estándares:
@@ -452,10 +452,10 @@ graph TD
     SW2 ---|"Activo"| SW3
     SW1 ---|"Activo"| SW3
     
-    style Root fill:#ff9999,stroke:#333,stroke-width:4px
-    style SW1 fill:#99ff99,stroke:#333,stroke-width:2px
-    style SW2 fill:#99ff99,stroke:#333,stroke-width:2px
-    style SW3 fill:#99ff99,stroke:#333,stroke-width:2px
+    style Root fill:#e74c3c,stroke:#2c3e50,stroke-width:4px,color:#FFFFFF
+    style SW1 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style SW2 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style SW3 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
     style Info fill:none,stroke:none
 ```
 
@@ -491,13 +491,13 @@ graph TD
     R3 ---|"Costo: 5"| R6
     R6 ---|"Costo: 5"| R7
     
-    style R1 fill:#ff9999,stroke:#333,stroke-width:2px
-    style R2 fill:#ff9999,stroke:#333,stroke-width:2px
-    style R3 fill:#ff9999,stroke:#333,stroke-width:2px
-    style R4 fill:#99ff99,stroke:#333,stroke-width:2px
-    style R5 fill:#99ff99,stroke:#333,stroke-width:2px
-    style R6 fill:#9999ff,stroke:#333,stroke-width:2px
-    style R7 fill:#9999ff,stroke:#333,stroke-width:2px
+    style R1 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R2 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R3 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R4 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R5 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R6 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style R7 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 ---
@@ -729,13 +729,13 @@ graph TB
     E --> F
     F --> G
     
-    style A fill:#ff9999,stroke:#333,stroke-width:2px
-    style B fill:#ff9999,stroke:#333,stroke-width:2px
-    style C fill:#ff9999,stroke:#333,stroke-width:2px
-    style D fill:#99ff99,stroke:#333,stroke-width:2px
-    style E fill:#99ff99,stroke:#333,stroke-width:2px
-    style F fill:#9999ff,stroke:#333,stroke-width:2px
-    style G fill:#9999ff,stroke:#333,stroke-width:2px
+    style A fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style B fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style C fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style D fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style F fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style G fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 Las capas son:
@@ -811,15 +811,15 @@ graph TD
     M2 --> D2
     M2 --> D3
     
-    style E1 fill:#ff9999,stroke:#333,stroke-width:2px
-    style E2 fill:#ff9999,stroke:#333,stroke-width:2px
-    style E3 fill:#ff9999,stroke:#333,stroke-width:2px
-    style E4 fill:#ff9999,stroke:#333,stroke-width:2px
-    style M1 fill:#99ff99,stroke:#333,stroke-width:2px
-    style M2 fill:#99ff99,stroke:#333,stroke-width:2px
-    style D1 fill:#9999ff,stroke:#333,stroke-width:2px
-    style D2 fill:#9999ff,stroke:#333,stroke-width:2px
-    style D3 fill:#9999ff,stroke:#333,stroke-width:2px
+    style E1 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E2 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E3 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E4 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style M1 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style M2 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style D1 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style D2 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style D3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
 ### Implementación
