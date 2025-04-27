@@ -376,10 +376,11 @@ graph TD
     SW1{Switch 1<br/>Prioridad: 8192}
     SW2{Switch 2<br/>Prioridad: 8192}
     SW3{Switch 3<br/>Prioridad: 8192}
+    Info[Enlaces activos en línea continua<br/>Enlaces bloqueados en línea punteada]
     
     Root ---|"Activo"| SW1
     Root ---|"Activo"| SW2
-    SW1 ---|"Bloqueado"| SW2
+    SW1 -.-|"Bloqueado"| SW2
     SW2 ---|"Activo"| SW3
     SW1 ---|"Activo"| SW3
     
@@ -387,8 +388,7 @@ graph TD
     style SW1 fill:#99ff99,stroke:#333,stroke-width:2px
     style SW2 fill:#99ff99,stroke:#333,stroke-width:2px
     style SW3 fill:#99ff99,stroke:#333,stroke-width:2px
-    
-    Note over Root,SW3: Las líneas continuas representan enlaces activos<br/>Las líneas punteadas representan enlaces bloqueados
+    style Info fill:none,stroke:none
 ```
 
 ---
