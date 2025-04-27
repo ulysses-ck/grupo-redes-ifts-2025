@@ -610,6 +610,100 @@ graph TD
 ```
 
 ---
+
+# 🔗 **21- Tipos de enlace: MPLS, LAN to LAN, microonda, VSAT**
+
+### a. Explicación de tipos de enlace:
+
+**MPLS (Multiprotocol Label Switching):**
+- Tecnología de transporte de datos que opera entre la capa 2 y capa 3 del modelo OSI
+- Usa etiquetas para dirigir el tráfico de manera más eficiente
+- Permite priorizar ciertos tipos de datos sobre otros
+- Ideal para grandes redes empresariales 🏢
+
+**LAN to LAN:**
+- Conexión directa entre redes locales
+- Puede implementarse a través de VPN o enlaces dedicados
+- Permite compartir recursos entre ubicaciones
+- Común en empresas con múltiples oficinas 🏢
+
+**Microonda:**
+- Transmisión punto a punto usando ondas electromagnéticas
+- Requiere línea de vista directa entre antenas
+- Frecuencias típicas entre 2 y 40 GHz
+- Útil para distancias medias sin obstáculos 📡
+
+**VSAT (Very Small Aperture Terminal):**
+- Comunicación satelital bidireccional
+- Usa antenas pequeñas (menos de 3 metros)
+- Cobertura global independiente de la infraestructura terrestre
+- Ideal para ubicaciones remotas 🛰️
+
+```mermaid
+graph TD
+    subgraph "Tipos de Enlace"
+        MPLS[MPLS<br/>Alta velocidad<br/>QoS garantizada]
+        LAN[LAN to LAN<br/>Conexión directa<br/>Recursos compartidos]
+        MW[Microonda<br/>Punto a punto<br/>Línea de vista]
+        VSAT[VSAT<br/>Cobertura global<br/>Satelital]
+    end
+    
+    style MPLS fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style LAN fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style MW fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style VSAT fill:#f1c40f,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+```
+
+### b. Tipos de enlaces adicionales:
+
+**Fibra Óptica:**
+- Transmisión mediante pulsos de luz
+- Altísima velocidad y ancho de banda
+- Inmune a interferencias electromagnéticas
+- Ideal para grandes volúmenes de datos 🔌
+
+**4G/5G:**
+- Conectividad móvil de alta velocidad
+- Gran cobertura en áreas urbanas
+- Permite movilidad total
+- Ideal para dispositivos móviles 📱
+
+### c. Ranking de enlaces (1-6, siendo 1 el mejor):
+
+```mermaid
+graph TD
+    subgraph "Rankings por Categoría"
+        E1[Económico:<br/>1. 4G/5G<br/>2. LAN to LAN<br/>3. Microonda<br/>4. MPLS<br/>5. Fibra Óptica<br/>6. VSAT]
+        E2[Performance:<br/>1. Fibra Óptica<br/>2. MPLS<br/>3. Microonda<br/>4. LAN to LAN<br/>5. 4G/5G<br/>6. VSAT]
+        E3[Capacidad:<br/>1. Fibra Óptica<br/>2. MPLS<br/>3. LAN to LAN<br/>4. Microonda<br/>5. 4G/5G<br/>6. VSAT]
+        E4[Restricciones:<br/>1. MPLS<br/>2. Fibra Óptica<br/>3. LAN to LAN<br/>4. 4G/5G<br/>5. VSAT<br/>6. Microonda]
+        E5[Distancia:<br/>1. VSAT<br/>2. Fibra Óptica<br/>3. MPLS<br/>4. 4G/5G<br/>5. Microonda<br/>6. LAN to LAN]
+        E6[Config. Simple:<br/>1. 4G/5G<br/>2. LAN to LAN<br/>3. VSAT<br/>4. Microonda<br/>5. MPLS<br/>6. Fibra Óptica]
+    end
+    
+    style E1 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E2 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E4 fill:#f1c40f,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E5 fill:#9b59b6,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+    style E6 fill:#34495e,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
+```
+
+### d. Escenarios y enlaces recomendados:
+
+1. **Conectividad de varios call centers con un data center central:**
+   - **Enlace recomendado**: MPLS
+   - **Razón**: Ofrece QoS garantizada, esencial para VoIP, y permite priorizar el tráfico crítico
+
+2. **Conectar los datos de los pozos petroleros durante 15 minutos por día:**
+   - **Enlace recomendado**: VSAT
+   - **Razón**: Ideal para ubicaciones remotas y transmisiones periódicas de datos
+
+3. **Comunicar dos edificios enfrentados en la misma calle:**
+   - **Enlace recomendado**: Microonda
+   - **Razón**: Solución costo-efectiva para distancias cortas con línea de vista directa
+
+---
 # 📶 **22- Describir la tecnología LTE.**
 **Long Term Evolution (LTE)** es un estándar de comunicación inalámbrica de cuarta generación (4G) que ofrece:
 - **Velocidades de datos más rápidas** y menor latencia que tecnologías anteriores como 3G, siendo entre 5 y 10 veces más rápido que 3G. ⚡
@@ -925,95 +1019,3 @@ graph LR
 **Nicolas**: Configuré varios repetidores de manera inalámbrica y hace poco conecté un repetidor mediante cable Ethernet que tuve que configurar el repetidor para que no asignara direcciones IP, sino que las asignara solo el router principal. Recientemente, ingresé al panel de configuración de mi router para cambiar la contraseña.
 
 **Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica. 
-
-# 🔗 **21- Tipos de enlace: MPLS, LAN to LAN, microonda, VSAT**
-
-### a. Explicación de tipos de enlace:
-
-**MPLS (Multiprotocol Label Switching):**
-- Tecnología de transporte de datos que opera entre la capa 2 y capa 3 del modelo OSI
-- Usa etiquetas para dirigir el tráfico de manera más eficiente
-- Permite priorizar ciertos tipos de datos sobre otros
-- Ideal para grandes redes empresariales 🏢
-
-**LAN to LAN:**
-- Conexión directa entre redes locales
-- Puede implementarse a través de VPN o enlaces dedicados
-- Permite compartir recursos entre ubicaciones
-- Común en empresas con múltiples oficinas 🏢
-
-**Microonda:**
-- Transmisión punto a punto usando ondas electromagnéticas
-- Requiere línea de vista directa entre antenas
-- Frecuencias típicas entre 2 y 40 GHz
-- Útil para distancias medias sin obstáculos 📡
-
-**VSAT (Very Small Aperture Terminal):**
-- Comunicación satelital bidireccional
-- Usa antenas pequeñas (menos de 3 metros)
-- Cobertura global independiente de la infraestructura terrestre
-- Ideal para ubicaciones remotas 🛰️
-
-```mermaid
-graph TD
-    subgraph "Tipos de Enlace"
-        MPLS[MPLS<br/>Alta velocidad<br/>QoS garantizada]
-        LAN[LAN to LAN<br/>Conexión directa<br/>Recursos compartidos]
-        MW[Microonda<br/>Punto a punto<br/>Línea de vista]
-        VSAT[VSAT<br/>Cobertura global<br/>Satelital]
-    end
-    
-    style MPLS fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style LAN fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style MW fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style VSAT fill:#f1c40f,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-```
-
-### b. Tipos de enlaces adicionales:
-
-**Fibra Óptica:**
-- Transmisión mediante pulsos de luz
-- Altísima velocidad y ancho de banda
-- Inmune a interferencias electromagnéticas
-- Ideal para grandes volúmenes de datos 🔌
-
-**4G/5G:**
-- Conectividad móvil de alta velocidad
-- Gran cobertura en áreas urbanas
-- Permite movilidad total
-- Ideal para dispositivos móviles 📱
-
-### c. Ranking de enlaces (1-6, siendo 1 el mejor):
-
-```mermaid
-graph TD
-    subgraph "Rankings por Categoría"
-        E1[Económico:<br/>1. 4G/5G<br/>2. LAN to LAN<br/>3. Microonda<br/>4. MPLS<br/>5. Fibra Óptica<br/>6. VSAT]
-        E2[Performance:<br/>1. Fibra Óptica<br/>2. MPLS<br/>3. Microonda<br/>4. LAN to LAN<br/>5. 4G/5G<br/>6. VSAT]
-        E3[Capacidad:<br/>1. Fibra Óptica<br/>2. MPLS<br/>3. LAN to LAN<br/>4. Microonda<br/>5. 4G/5G<br/>6. VSAT]
-        E4[Restricciones:<br/>1. MPLS<br/>2. Fibra Óptica<br/>3. LAN to LAN<br/>4. 4G/5G<br/>5. VSAT<br/>6. Microonda]
-        E5[Distancia:<br/>1. VSAT<br/>2. Fibra Óptica<br/>3. MPLS<br/>4. 4G/5G<br/>5. Microonda<br/>6. LAN to LAN]
-        E6[Config. Simple:<br/>1. 4G/5G<br/>2. LAN to LAN<br/>3. VSAT<br/>4. Microonda<br/>5. MPLS<br/>6. Fibra Óptica]
-    end
-    
-    style E1 fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E2 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E4 fill:#f1c40f,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E5 fill:#9b59b6,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E6 fill:#34495e,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-```
-
-### d. Escenarios y enlaces recomendados:
-
-1. **Conectividad de varios call centers con un data center central:**
-   - **Enlace recomendado**: MPLS
-   - **Razón**: Ofrece QoS garantizada, esencial para VoIP, y permite priorizar el tráfico crítico
-
-2. **Conectar los datos de los pozos petroleros durante 15 minutos por día:**
-   - **Enlace recomendado**: VSAT
-   - **Razón**: Ideal para ubicaciones remotas y transmisiones periódicas de datos
-
-3. **Comunicar dos edificios enfrentados en la misma calle:**
-   - **Enlace recomendado**: Microonda
-   - **Razón**: Solución costo-efectiva para distancias cortas con línea de vista directa
