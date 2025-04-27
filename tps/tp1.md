@@ -293,6 +293,9 @@ Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen info
   - Contiene detalles como los puertos de origen y destino, el número de secuencia y la suma de verificación hash. 
   - Básicamente se encarga de dividir los datos en partes más pequeñas, numerarlas y asegurarse de que lleguen completas y en orden. 📦
 
+- **Datos o Payload**
+  - Es la información real que se quiere transmitir, por ejemplo, una página web.
+
 - **Flags**: 
   - Son indicadores en el encabezado que controlan el estado de la conexión, como:
     - **SYN** (inicio de conexión) 🔄
