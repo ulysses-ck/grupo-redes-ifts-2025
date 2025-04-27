@@ -248,7 +248,7 @@ Las redes también se clasifican por su estructura de conexión:
 
 ```mermaid
 graph TD
-    subgraph Star Topology
+    subgraph Star
         S_Central((Central))
         S_Node1[Node 1]
         S_Node2[Node 2]
@@ -258,7 +258,17 @@ graph TD
         S_Central --- S_Node3
     end
 
-    subgraph Ring Topology
+    subgraph Bus
+        B_Bus[Bus]
+        B_Node1[Node 1]
+        B_Node2[Node 2]
+        B_Node3[Node 3]
+        B_Bus --- B_Node1
+        B_Bus --- B_Node2
+        B_Bus --- B_Node3
+    end
+
+    subgraph Ring
         R_Node1[Node 1]
         R_Node2[Node 2]
         R_Node3[Node 3]
@@ -273,6 +283,16 @@ graph TD
 ---
 # 📡 **10- Explicar el servicio de DHCP.**
 Un servicio de **DHCP** es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant DHCP Server
+    Client->>DHCP Server: DHCP Discover
+    DHCP Server->>Client: DHCP Offer
+    Client->>DHCP Server: DHCP Request
+    DHCP Server->>Client: DHCP Acknowledge
+```
 
 # 🌐 **11- Explicar el servicio de DNS.**
 El **DNS** (Sistema de Nombres de Dominio) traduce los nombres de dominios aptos para lectura humana (por ejemplo, www.amazon.com) a direcciones IP aptas para lectura por parte de máquinas (por ejemplo, 192.0.2.44). 
@@ -353,11 +373,35 @@ graph LR
 # 🛡️ **18- ¿Qué es una DMZ?**
 Una **DMZ (Zona Desmilitarizada)** en un área separada dentro de una red donde se colocan los servidores que deben ser accesibles desde Internet, como páginas web o correos electrónicos, pero sin dar acceso directo a la red interna principal. Funciona como una zona intermedia de seguridad: si alguien intenta atacar desde afuera, solo llega a la DMZ y no a los sistemas más importantes de la red interna.
 
+```mermaid
+graph LR
+    Internet((Internet))
+    FW1{Firewall}
+    DMZ[DMZ]
+    FW2{Firewall}
+    Internal[Internal Network]
+    
+    Internet --- FW1
+    FW1 --- DMZ
+    DMZ --- FW2
+    FW2 --- Internal
+```
+
 ---
 
 # 🌉 **19- ¿Qué es un Gateway?**
 Una **gateway** o puerta de enlace es el dispositivo que conecta distintas redes. Su propósito es traducir la información del protocolo utilizado en una red de origen al protocolo usado en la red de destino. 
 Si un dispositivo dentro de una red quiere comunicarse con otro que está fuera de esa misma red, se necesita una gateway. 
+
+```mermaid
+graph LR
+    LAN[Local Network]
+    Gateway{Gateway/Router}
+    Internet((Internet))
+    
+    LAN --- Gateway
+    Gateway --- Internet
+```
 
 Hoy en día, es muy común que las gateways se combinen con los enrutadores, por lo que muchas veces se puede hablar de una gateway refiriéndose a un enrutador. 
 Un ejemplo muy común de esta combinación es el router que te instalan cuando contratás un servicio de internet en tu casa: este utiliza una gateway para conectar los dispositivos de la red local con redes externas, como Internet. 🌐
@@ -367,6 +411,20 @@ Un ejemplo muy común de esta combinación es el router que te instalan cuando c
 # ⚖️ **20- Según Microsoft, ¿qué significa NLB?**
 **NLB** significa **Network Load Balancing** o en español, **equilibrio de carga de red**. 
 Es una función de Windows Server que sirve para distribuir y equilibrar el tráfico de red entre varios servidores como si fueran uno solo, mejorando así la **disponibilidad** y la **escalabilidad**. 📈
+
+```mermaid
+graph TD
+    Client((Client))
+    LB{Load Balancer}
+    S1[Server 1]
+    S2[Server 2]
+    S3[Server 3]
+    
+    Client --> LB
+    LB --> S1
+    LB --> S2
+    LB --> S3
+```
 
 ---
 # 📶 **22- Describir la tecnología LTE.**
