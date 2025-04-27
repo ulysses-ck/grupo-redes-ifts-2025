@@ -431,7 +431,24 @@ graph TD
 **Long Term Evolution (LTE)** es un estándar de comunicación inalámbrica de cuarta generación (4G) que ofrece:
 - **Velocidades de datos más rápidas** y menor latencia que tecnologías anteriores como 3G, siendo entre 5 y 10 veces más rápido que 3G. ⚡
 - Puede alcanzar hasta **100 Mbps de descarga** y **50 Mbps de carga**. 
-- Está basada en el protocolo IP, lo que facilita la transmisión de datos, voz y video de forma más eficiente, en lugar de utilizar sistemas de conmutación por circuitos como en generaciones anteriores (3G y 2G). 📱
+
+```mermaid
+graph LR
+    UE((User Equipment))
+    eNB[eNodeB/Base Station]
+    MME{Mobility Management}
+    SGW[Serving Gateway]
+    PGW[Packet Gateway]
+    Internet((Internet))
+    
+    UE --- eNB
+    eNB --- MME
+    eNB --- SGW
+    SGW --- PGW
+    PGW --- Internet
+```
+
+Está basada en el protocolo IP, lo que facilita la transmisión de datos, voz y video de forma más eficiente, en lugar de utilizar sistemas de conmutación por circuitos como en generaciones anteriores (3G y 2G). 📱
 
 Además, tiene soporte de voz (**VoLTE**), lo que mejora la calidad de las llamadas de voz y permite realizar llamadas y navegar por Internet de manera simultánea. 
 LTE fue fundamental para el avance de la tecnología móvil, ya que no solo permite un acceso más rápido a Internet, sino que también soporta aplicaciones avanzadas como **streaming**, **realidad aumentada** e **IoT**. También facilita la transición hacia la tecnología **5G**. 🚀
@@ -573,6 +590,19 @@ Este enfoque se basa en un **cable coaxial** como medio de transmisión. 🔗
 Los protocolos que se usan para enviar y recibir correo son:
 - **SMTP** (Simple Mail Transfer Protocol) para el envío de correos. 📤
 - **POP3** (Post Office Protocol Version 3) para la recepción de correos. 📥
+
+```mermaid
+sequenceDiagram
+    participant User1 as Sender
+    participant SMTP as SMTP Server
+    participant POP3 as POP3 Server
+    participant User2 as Receiver
+    
+    User1->>SMTP: Send email (SMTP)
+    SMTP->>POP3: Forward email
+    User2->>POP3: Request emails (POP3)
+    POP3->>User2: Download emails
+```
 
 ---
 # 📬 **32- ¿Qué protocolo puede usarse para leer correo recibido?** 
