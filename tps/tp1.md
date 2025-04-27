@@ -141,8 +141,6 @@ graph TD
     class PC3,PC4,Server2 vlan20
 ```
 
-[⬅️ Anterior](../README.md) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#2--qué-es-una-vpn)
-
 ---
 
 # 🔒**2- ¿Qué es una VPN?**
@@ -180,8 +178,6 @@ graph LR
     style Web2 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
     style Web3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
-
-[⬅️ Anterior](#1--qué-es-una-vlan) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#3--qué-es-una-san)
 
 ---
 
@@ -232,8 +228,6 @@ graph TD
     style ST3 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
-[⬅️ Anterior](#2--qué-es-una-vpn) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#4--diferencias-entre-un-hub-repetidor-router-y-switch-explicar-las-diferencias)
-
 ---
 # 🔄 **4- Diferencias entre un Hub, Repetidor, Router y SWITCH. Explicar las diferencias.**
 - **Hub**: Conecta varios dispositivos en una red y transmite datos a todos ellos. No distingue a dónde va la información, envía todo a todos. 🖥️
@@ -265,16 +259,12 @@ graph LR
     Repeater --- Hub
 ```
 
-[⬅️ Anterior](#3--qué-es-una-san) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#5--qué-es-un-protocolo-de-comunicaciones)
-
 ---
 # 📜 **5- ¿Qué es un protocolo de comunicaciones?**
 Es un conjunto de reglas que permite que las redes "hablen en el mismo idioma" y se comuniquen entre sí. Un protocolo define:
 - **Restricciones**
 - **Procedimientos**
 - **Formatos** para el intercambio de paquetes.
-
-[⬅️ Anterior](#4--diferencias-entre-un-hub-repetidor-router-y-switch-explicar-las-diferencias) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#6-explique-tcpip-y-netbios-resuma-sus-diferencias)
 
 ---
 
@@ -289,8 +279,6 @@ Es un conjunto de reglas que permite que las redes "hablen en el mismo idioma" y
 - **Diferencias**: 
   - **TCP/IP** es más robusto y escalable, funcionando en redes grandes. 
   - **NetBIOS** es más limitado y suele utilizarse en redes pequeñas sin enrutamiento externo. 
-
-[⬅️ Anterior](#5--qué-es-un-protocolo-de-comunicaciones) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#7-estructura-de-un-paquete-tcpip-y-los-flags)
 
 ---
 
@@ -311,21 +299,17 @@ Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen info
     - **ACK** (confirmación) ✅
     - **FIN** (cierre de conexión) ❌
 
-[⬅️ Anterior](#6-explique-tcpip-y-netbios-resuma-sus-diferencias) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#8-tipos-de-redes-según-la-geografía)
-
 ---
-# 🌍 **8. Tipos de redes según la geografía**
+# 🌍 **8. Tipos de redes según la geografía Las redes pueden clasificarse por su alcance geográfico:**
 Las redes pueden clasificarse por su alcance geográfico:
 - **PAN** (Personal Area Network): Para dispositivos personales, como Bluetooth. 📱
 - **LAN** (Local Area Network): Redes pequeñas, como las de hogares o empresas. 🏠
 - **MAN** (Metropolitan Area Network): Conectan ciudades o áreas grandes. 🌆
 - **WAN** (Wide Area Network): Redes globales, como Internet. 🌐
 
-[⬅️ Anterior](#7-estructura-de-un-paquete-tcpip-y-los-flags) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#9-tipos-de-redes-según-la-topología)
-
 ---
 
-# 🔗 **9. Tipos de redes según la topología**
+# 🔗 **9. Tipos de redes según la topología Las redes también se clasifican por su estructura de conexión:**
 Las redes también se clasifican por su estructura de conexión:
 - **Red en estrella**: Dispositivos conectados a un nodo central. ⭐
 - **Red en bus**: Todos los dispositivos comparten un único canal de comunicación. 🚌
@@ -366,8 +350,6 @@ graph TD
     end
 ```
 
-[⬅️ Anterior](#8-tipos-de-redes-según-la-geografía) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#10--explicar-el-servicio-de-dhcp)
-
 ---
 # 📡 **10- Explicar el servicio de DHCP.**
 Un servicio de **DHCP** es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
@@ -385,9 +367,6 @@ sequenceDiagram
     Note over Cliente,DHCP: El proceso se conoce como DORA<br/>(Discover, Offer, Request, Acknowledge)
 ```
 
-[⬅️ Anterior](#9-tipos-de-redes-según-la-topología) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#11--explicar-el-servicio-de-dns)
-
----
 # 🌐 **11- Explicar el servicio de DNS.**
 El **DNS** (Sistema de Nombres de Dominio) traduce los nombres de dominios aptos para lectura humana (por ejemplo, www.amazon.com) a direcciones IP aptas para lectura por parte de máquinas (por ejemplo, 192.0.2.44). 
 Esto permite a los usuarios acceder a sitios web utilizando nombres fáciles de recordar, en lugar de tener que recordar direcciones IP numéricas. 🌍
@@ -411,8 +390,6 @@ sequenceDiagram
     
     Note over Usuario,DNS_Autoritativo: Proceso de resolución DNS jerárquica
 ```
-
-[⬅️ Anterior](#10--explicar-el-servicio-de-dhcp) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#12--explicar-las-tecnologías-wireless-y-sus-estándares)
 
 ---
 # 📡 **12- Explicar las tecnologías Wireless, y sus estándares.**
@@ -453,14 +430,10 @@ graph TD
 
 - **GSM** (Sistema Global para Comunicaciones Móviles): Estándar de comunicaciones móviles de segunda generación (2G). Incluye especificaciones de la capa física que permiten la implementación del protocolo **GPRS** (Servicio General de Radio por Paquetes) para la transmisión de datos sobre redes de telefonía celular. 📱
 
-[⬅️ Anterior](#11--explicar-el-servicio-de-dns) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#13--qué-es-un-proxy)
-
 ---
 
 # 🔄 **13- ¿Qué es un Proxy?**
 Un **proxy** es un servidor que recibe las peticiones de un usuario y las traslada a otro servidor. Una **VPN** también funciona como un servidor proxy, pero toma todo el tráfico entrante de un usuario, en vez de solamente algunas peticiones. 🔍
-
-[⬅️ Anterior](#12--explicar-las-tecnologías-wireless-y-sus-estándares) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#14--explicar-el-protocolo-spanning-tree)
 
 ---
 # 🌉 **14- Explicar el protocolo Spanning tree.**
@@ -487,8 +460,6 @@ graph TD
     style SW3 fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
     style Info fill:none,stroke:none
 ```
-
-[⬅️ Anterior](#13--qué-es-un-proxy) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#15--explicar-el-protocolo-de-comunicaciones-ospf)
 
 ---
 # 🛣️ **15- Explicar el protocolo de comunicaciones OSPF.**
@@ -531,8 +502,6 @@ graph TD
     style R7 fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
 ```
 
-[⬅️ Anterior](#14--explicar-el-protocolo-spanning-tree) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#16--explicar-el-protocolo-arp)
-
 ---
 # 🔗 **16- Explicar el protocolo ARP.**
 El protocolo **ARP** (Address Resolution Protocol) es un sistema que ayuda a conectar las direcciones IP, que pueden cambiar, con las direcciones físicas fijas de los dispositivos en una red local (LAN). 
@@ -553,8 +522,6 @@ sequenceDiagram
     
     PC1->>PC2: Datos (usando la MAC obtenida)
 ```
-
-[⬅️ Anterior](#15--explicar-el-protocolo-de-comunicaciones-ospf) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#17--qué-es-un-firewall)
 
 ---
 
@@ -585,8 +552,6 @@ graph LR
     class Internal,WebServer,MailServer secure
 ```
 
-[⬅️ Anterior](#16--explicar-el-protocolo-arp) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#18--qué-es-una-dmz)
-
 ---
 # 🛡️ **18- ¿Qué es una DMZ?**
 Una **DMZ (Zona Desmilitarizada)** en un área separada dentro de una red donde se colocan los servidores que deben ser accesibles desde Internet, como páginas web o correos electrónicos, pero sin dar acceso directo a la red interna principal. Funciona como una zona intermedia de seguridad: si alguien intenta atacar desde afuera, solo llega a la DMZ y no a los sistemas más importantes de la red interna.
@@ -604,8 +569,6 @@ graph LR
     DMZ --- FW2
     FW2 --- Internal
 ```
-
-[⬅️ Anterior](#17--qué-es-un-firewall) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#19--qué-es-un-gateway)
 
 ---
 
@@ -626,8 +589,6 @@ graph LR
 Hoy en día, es muy común que las gateways se combinen con los enrutadores, por lo que muchas veces se puede hablar de una gateway refiriéndose a un enrutador. 
 Un ejemplo muy común de esta combinación es el router que te instalan cuando contratás un servicio de internet en tu casa: este utiliza una gateway para conectar los dispositivos de la red local con redes externas, como Internet. 🌐
 
-[⬅️ Anterior](#18--qué-es-una-dmz) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#20--según-microsoft-qué-significa-nlb)
-
 ---
 
 # ⚖️ **20- Según Microsoft, ¿qué significa NLB?**
@@ -647,8 +608,6 @@ graph TD
     LB --> S2
     LB --> S3
 ```
-
-[⬅️ Anterior](#19--qué-es-un-gateway) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#21--tipos-de-enlace-mpls-lan-to-lan-microonda-vsat)
 
 ---
 
@@ -744,8 +703,6 @@ graph TD
    - **Enlace recomendado**: Microonda
    - **Razón**: Solución costo-efectiva para distancias cortas con línea de vista directa
 
-[⬅️ Anterior](#20--según-microsoft-qué-significa-nlb) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#22--describir-la-tecnología-lte)
-
 ---
 # 📶 **22- Describir la tecnología LTE.**
 **Long Term Evolution (LTE)** es un estándar de comunicación inalámbrica de cuarta generación (4G) que ofrece:
@@ -773,8 +730,6 @@ Está basada en el protocolo IP, lo que facilita la transmisión de datos, voz y
 Además, tiene soporte de voz (**VoLTE**), lo que mejora la calidad de las llamadas de voz y permite realizar llamadas y navegar por Internet de manera simultánea. 
 LTE fue fundamental para el avance de la tecnología móvil, ya que no solo permite un acceso más rápido a Internet, sino que también soporta aplicaciones avanzadas como **streaming**, **realidad aumentada** e **IoT**. También facilita la transición hacia la tecnología **5G**. 🚀
 
-[⬅️ Anterior](#21--tipos-de-enlace-mpls-lan-to-lan-microonda-vsat) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#23--explique-la-solución-de-microsoft-teams-si-quieren-describir-otra-solución-de-otra-empresa-es-también-válido)
-
 ---
 
 # 💬 **23- Explique la solución de Microsoft Teams. Si quieren describir otra solución de otra empresa es también válido**
@@ -787,8 +742,6 @@ Es una aplicación de mensajería que combina:
 
 Otra solución sería **Slack**, que es una plataforma de comunicación y colaboración para equipos basada en canales. Permite a las personas conectar, compartir información y colaborar en proyectos. 🔗
 
-[⬅️ Anterior](#22--describir-la-tecnología-lte) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#24--qué-significa-aplicar-calidad-en-un-enlace-mpls)
-
 ---
 
 # 📊 **24- ¿Qué significa aplicar calidad en un enlace MPLS?**
@@ -797,8 +750,6 @@ Esto se hace mediante **QoS** (Quality of Service).
 
 De esta manera, clasificás el tráfico, priorizás lo que necesita menor latencia, reservás una parte mínima de ancho de banda para ciertos tipos de tráfico crítico, aplicás políticas para evitar saturaciones y se usan técnicas para manejar el retardo y la pérdida de paquetes. 
 Eso es aplicar calidad en un enlace MPLS, y todo esto sirve para mejorar la experiencia del usuario, garantizar el funcionamiento de servicios críticos y optimizar el uso del enlace MPLS. 📈
-
-[⬅️ Anterior](#23--explique-la-solución-de-microsoft-teams-si-quieren-describir-otra-solución-de-otra-empresa-es-también-válido) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#25--qué-diferencias-puede-encontrar-entre-una-conexión-coaxial-utp-o-fibra)
 
 ---
 
@@ -824,8 +775,6 @@ Eso es aplicar calidad en un enlace MPLS, y todo esto sirve para mejorar la expe
 - **Costo**: Alto, aunque tiende a reducirse con el tiempo.
 - **Uso principal**: Se emplea en cables submarinos, sistemas de audio óptico y para ofrecer internet de alta velocidad tanto en hogares como en empresas. 
 
-[⬅️ Anterior](#24--qué-significa-aplicar-calidad-en-un-enlace-mpls) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#26--según-cisco-qué-significa-ccent-ccna-y-ccnp-descripción-breve-del-track-routing--switching-y-de--algún-otro-a-elección-ej-wireless-security-cloud-etc)
-
 ---
 
 # 📜 **26- Según Cisco, ¿qué significa CCENT, CCNA y CCNP? Descripción breve del Track Routing & Switching y de  algún otro a elección (ej. Wireless, Security, Cloud, etc).**
@@ -848,8 +797,6 @@ Los profesionales deben ser capaces de:
 - Comprender tecnologías Wi-Fi (IEEE 802.11) y sus estándares. 📶
 - Implementar métodos de autenticación y seguridad (como WPA2/3). 🔐
 - Solucionar problemas de cobertura, interferencia y rendimiento en redes inalámbricas. 📡
-
-[⬅️ Anterior](#25--qué-diferencias-puede-encontrar-entre-una-conexión-coaxial-utp-o-fibra) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#27--explique-el-modelo-osi)
 
 ---
 
@@ -893,8 +840,6 @@ graph TB
     style G fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
 ```
 
-[⬅️ Anterior](#26--según-cisco-qué-significa-ccent-ccna-y-ccnp-descripción-breve-del-track-routing--switching-y-de--algún-otro-a-elección-ej-wireless-security-cloud-etc) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#28--realizar-cuestionario-online-y-copiar-el-resultado-1-por-cada-integrante)
-
 ---
 
 # **🤓 28- Realizar cuestionario online y copiar el resultado: (1 por cada integrante)**
@@ -911,10 +856,6 @@ Ulises:
 
 Agustin:  
 ![Puntuacion-Agustib](28-puntuacion/puntuacion-agustin.jpg)
-
----
-
-[⬅️ Anterior](#27--explique-el-modelo-osi) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#29--explicar-el-estándar-ieee-8023-regula-la-red-cómo-se-implementa-ventajas-y-desventajas)
 
 ---
 
@@ -978,19 +919,13 @@ Se implementa a través de dispositivos como switches y routers que utilizan cab
 - **Interferencias**: Puede ser susceptible a interferencias electromagnéticas
 - **Colisiones**: En redes más antiguas, el uso de CSMA/CD puede llevar a colisiones de datos, aunque esto disminuyo con el uso de switches.
 
-[⬅️ Anterior](#28--realizar-cuestionario-online-y-copiar-el-resultado-1-por-cada-integrante) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#30--explicar-el-estándar-ieee-8024-regula-la-red)
-
----
 
 # 📡 **30- Explicar el estándar IEEE 802.4 regula la red.**
 El estándar **IEEE 802.4** regula las redes de área local (LAN) utilizando un **método de acceso por token bus**. 
 Se implementa mediante un sistema de **token** que permite a los dispositivos en la red tomar turnos para transmitir datos, evitando colisiones. 
 Este enfoque se basa en un **cable coaxial** como medio de transmisión. 🔗
 
-[⬅️ Anterior](#29--explicar-el-estándar-ieee-8023-regula-la-red-cómo-se-implementa-ventajas-y-desventajas) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#31--qué-protocolos-se-usan-para-enviar-y-recibir-correo)
-
 ---
-
 # 📧 **31- ¿Qué protocolos se usan para enviar y recibir correo?**
 Los protocolos que se usan para enviar y recibir correo son:
 - **SMTP** (Simple Mail Transfer Protocol) para el envío de correos. 📤
@@ -1009,17 +944,11 @@ sequenceDiagram
     POP3->>User2: Download emails
 ```
 
-[⬅️ Anterior](#30--explicar-el-estándar-ieee-8024-regula-la-red) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#32--qué-protocolo-puede-usarse-para-leer-correo-recibido)
-
 ---
-
 # 📬 **32- ¿Qué protocolo puede usarse para leer correo recibido?** 
 El protocolo que puede usarse para leer correo recibido es el **POP3**. 📧
 
-[⬅️ Anterior](#31--qué-protocolos-se-usan-para-enviar-y-recibir-correo) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#33--diferencias-entre-ipv4-e-ipv6)
-
 ---
-
 # 🌐 **33- Diferencias entre IPV4 e IPV6**
 ### **IPV4:**
 - **Lanzamiento**: 1981
@@ -1052,8 +981,6 @@ graph LR
     end
 ```
 
-[⬅️ Anterior](#32--qué-protocolo-puede-usarse-para-leer-correo-recibido) | [⬆️ Volver al índice](#desarrollo) | [➡️ Siguiente](#34--individual-para-cada-integrante-del-grupo-qué-experiencia-tienen-en-redes)
-
 ---
 
 # 👥 **34- (Individual para cada integrante del grupo) ¿Qué experiencia tienen en redes?**
@@ -1061,9 +988,6 @@ graph LR
 
 **Nicolas**: Configuré varios repetidores de manera inalámbrica y hace poco conecté un repetidor mediante cable Ethernet que tuve que configurar el repetidor para que no asignara direcciones IP, sino que las asignara solo el router principal. Recientemente, ingresé al panel de configuración de mi router para cambiar la contraseña.
 
-**Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica. 
+**Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica.  
 
 **Gabriel**: No tengo experiencia.
-
-[⬅️ Anterior](#33--diferencias-entre-ipv4-e-ipv6) | [⬆️ Volver al índice](#desarrollo)
-
