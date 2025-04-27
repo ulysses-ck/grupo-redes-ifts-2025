@@ -803,36 +803,6 @@ Los profesionales deben ser capaces de:
 # 🌐 **27- Explique el modelo OSI.**
 El **Modelo OSI** (Open Systems Interconnection) es un marco de referencia que estandariza las funciones de comunicación en redes de computadoras en **siete capas**, facilitando la interconexión entre diferentes sistemas. 
 
-```mermaid
-graph TB
-    subgraph "Capas de Host"
-        A[7. Aplicación<br/>HTTP, FTP, SMTP]
-        B[6. Presentación<br/>SSL, TLS]
-        C[5. Sesión<br/>NetBIOS, RPC]
-        D[4. Transporte<br/>TCP, UDP]
-    end
-    
-    subgraph "Capas de Red"
-        E[3. Red<br/>IP, ICMP]
-        F[2. Enlace de Datos<br/>Ethernet, WiFi]
-        G[1. Física<br/>Cables, Señales]
-    end
-    
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    
-    style A fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style B fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style C fill:#e74c3c,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style D fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style E fill:#27ae60,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style F fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-    style G fill:#3498db,stroke:#2c3e50,stroke-width:2px,color:#FFFFFF
-```
 
 Las capas son:
 
