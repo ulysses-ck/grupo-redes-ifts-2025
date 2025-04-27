@@ -19,7 +19,7 @@
 6- Explique TCP/IP y NetBios, resuma sus diferencias. (Acá sí explicar cada uno y sus
 diferencias)
 
-7- ¿Cómo está formado un paquete de datos en TCP/IP? ¿Qué es un “flag” en un
+7- ¿Cómo está formado un paquete de datos en TCP/IP? ¿Qué es un "flag" en un
 paquete de TCP/IP?
 
 8- Defina la red según su geografía. Explicar distintas variantes.
@@ -499,7 +499,7 @@ Se implementa a través de dispositivos como switches y routers que utilizan cab
 
 ### Desventajas
 - **Alcance limitado**: La distancia máxima para cables de par trenzado es de **100 metros**, lo que puede ser una limitación en grandes instalaciones. 📏
-- **Interferencias**: Puede ser susceptible a interferencias electromagn
+- **Interferencias**: Puede ser susceptible a interferencias electromagnéticas
 - **Colisiones**: En redes más antiguas, el uso de CSMA/CD puede llevar a colisiones de datos, aunque esto disminuyo con el uso de switches.
 
 
