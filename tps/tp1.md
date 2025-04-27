@@ -104,6 +104,41 @@ ninguna experiencia, etc.
 - **Aumentar la seguridad** 🔒
 - **Aislar dispositivos** según su función o ubicación 🏢
 
+```mermaid
+graph TD
+    Switch[Switch Principal]
+    PC1[PC Marketing]
+    PC2[PC Marketing]
+    PC3[PC Finanzas]
+    PC4[PC Finanzas]
+    Server1[Servidor Marketing]
+    Server2[Servidor Finanzas]
+
+    Switch --- PC1
+    Switch --- PC2
+    Switch --- PC3
+    Switch --- PC4
+    Switch --- Server1
+    Switch --- Server2
+
+    subgraph VLAN 10 - Marketing
+        PC1
+        PC2
+        Server1
+    end
+
+    subgraph VLAN 20 - Finanzas
+        PC3
+        PC4
+        Server2
+    end
+
+    classDef vlan10 fill:#ff9999,stroke:#333,stroke-width:2px;
+    classDef vlan20 fill:#99ff99,stroke:#333,stroke-width:2px;
+    class PC1,PC2,Server1 vlan10;
+    class PC3,PC4,Server2 vlan20;
+```
+
 ---
 
 # 🔒**2- ¿Qué es una VPN?**
@@ -132,6 +167,27 @@ Una **SAN** (Storage Area Network) es una red especializada para acceder a dispo
 - **Router**: Conecta diferentes redes entre sí y provee acceso a Internet. Decide la mejor ruta para enviar datos basándose en direcciones IP. 🌍
 
 - **Switch**: Conecta dispositivos en una red local y envía datos solo al destinatario correcto. Aprende direcciones MAC y mejora el rendimiento de la red. ⚙️
+
+```mermaid
+graph LR
+    Internet((Internet))
+    Router[Router]
+    Switch[Switch]
+    Hub[Hub]
+    Repeater[Repeater]
+    PC1[PC 1]
+    PC2[PC 2]
+    PC3[PC 3]
+    PC4[PC 4]
+
+    Internet --- Router
+    Router --- Switch
+    Switch --- PC1
+    Switch --- PC2
+    Hub --- PC3
+    Hub --- PC4
+    Repeater --- Hub
+```
 
 ---
 # 📜 **5- ¿Qué es un protocolo de comunicaciones?**
@@ -190,6 +246,30 @@ Las redes también se clasifican por su estructura de conexión:
 - **Red en anillo**: Cada dispositivo está conectado con el siguiente, formando un círculo. 🔵
 - **Red en malla**: Cada dispositivo tiene múltiples conexiones, ofreciendo redundancia. 🔗
 
+```mermaid
+graph TD
+    subgraph "Star Topology"
+        S_Central((Central))
+        S_Node1[Node 1]
+        S_Node2[Node 2]
+        S_Node3[Node 3]
+        S_Central --- S_Node1
+        S_Central --- S_Node2
+        S_Central --- S_Node3
+    end
+
+    subgraph "Ring Topology"
+        R_Node1[Node 1]
+        R_Node2[Node 2]
+        R_Node3[Node 3]
+        R_Node4[Node 4]
+        R_Node1 --- R_Node2
+        R_Node2 --- R_Node3
+        R_Node3 --- R_Node4
+        R_Node4 --- R_Node1
+    end
+```
+
 ---
 # 📡 **10- Explicar el servicio de DHCP.**
 Un servicio de **DHCP** es el cual se utiliza para asignar una IP a un dispositivo. Sin esta, se necesitaría asignar una IP estática como 192.168.1.X manualmente.
@@ -197,6 +277,14 @@ Un servicio de **DHCP** es el cual se utiliza para asignar una IP a un dispositi
 # 🌐 **11- Explicar el servicio de DNS.**
 El **DNS** (Sistema de Nombres de Dominio) traduce los nombres de dominios aptos para lectura humana (por ejemplo, www.amazon.com) a direcciones IP aptas para lectura por parte de máquinas (por ejemplo, 192.0.2.44). 
 Esto permite a los usuarios acceder a sitios web utilizando nombres fáciles de recordar, en lugar de tener que recordar direcciones IP numéricas. 🌍
+
+sequenceDiagram
+    participant Client
+    participant DNS
+    participant Website
+    Client->>DNS: Query: www.example.com
+    DNS->>Client: Response: 93.184.216.34
+    Client->>Website: HTTP Request
 
 ---
 # 📡 **12- Explicar las tecnologías Wireless, y sus estándares.**
@@ -237,6 +325,29 @@ Básicamente, convierte una dirección IP en la dirección **MAC** de un disposi
 # 🔥 **17- ¿Qué es un Firewall?**
 Un **firewall** es una herramienta de seguridad que controla qué datos pueden entrar o salir de una red o computadora. 
 Actúa como una especie de "puerta" o "filtro" entre tu red y el resto de Internet, permitiendo solo el tráfico autorizado y bloqueando el que puede ser peligroso. 🔒
+
+```mermaid
+graph LR
+    Internet((Internet))
+    Firewall1{External Firewall}
+    Firewall2{Internal Firewall}
+    DMZ[DMZ]
+    Internal[Internal Network]
+    WebServer[Web Server]
+    MailServer[Mail Server]
+
+    Internet --- Firewall1
+    Firewall1 --- DMZ
+    DMZ --- WebServer
+    DMZ --- MailServer
+    Firewall1 --- Firewall2
+    Firewall2 --- Internal
+
+    classDef secure fill:#90EE90
+    classDef danger fill:#FFB6C1
+    class Internet danger
+    class Internal,Server1,Server2 secure
+```
 
 ---
 # 🛡️ **18- ¿Qué es una DMZ?**
@@ -349,6 +460,31 @@ Las capas son:
 6. **Capa de Presentación**: Traduce y formatea los datos para la capa de aplicación, asegurando que sean comprensibles. 🖥️
 7. **Capa de Aplicación**: Proporciona servicios de red a las aplicaciones del usuario final, como correo electrónico y navegación web. 📧
 
+```mermaid
+graph TD
+    L7[7. Application]
+    L6[6. Presentation]
+    L5[5. Session]
+    L4[4. Transport]
+    L3[3. Network]
+    L2[2. Data Link]
+    L1[1. Physical]
+
+    L7 --- L6
+    L6 --- L5
+    L5 --- L4
+    L4 --- L3
+    L3 --- L2
+    L2 --- L1
+
+    classDef upper fill:#FFB6C1
+    classDef middle fill:#90EE90
+    classDef lower fill:#87CEEB
+    class L7,L6,L5 upper
+    class L4,L3 middle
+    class L2,L1 lower
+```
+
 ---
 # 📡 **29- Explicar el estándar IEEE 802.3 regula la red. Cómo se implementa, ventajas y desventajas.**
 **IEEE 802.3**: Es un estándar que regula las redes **Ethernet**, definiendo las especificaciones para la transmisión de datos en redes de área local (LAN) mediante cables.
@@ -401,6 +537,19 @@ El protocolo que puede usarse para leer correo recibido es el **POP3**. 📧
 - **Tamaño de paquete mínimo requerido**: 1.280 bytes
 - **Configuración**: Permite configuración automática sin necesidad de DHCP
 - **Observaciones**: Está diseñado para que nunca falten direcciones. Cada persona podría tener trillones de IPs sin problema. 🌌
+
+```mermaid
+graph LR
+    subgraph IPv4
+        IPv4_Header[32 bits header]
+        IPv4_Addr["192.168.1.1"]
+    end
+
+    subgraph IPv6
+        IPv6_Header[128 bits header]
+        IPv6_Addr["2001:0db8:85a3::8a2e:0370:7334"]
+    end
+```
 
 ---
 
