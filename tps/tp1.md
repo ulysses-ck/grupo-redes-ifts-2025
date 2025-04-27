@@ -462,28 +462,29 @@ Las capas son:
 7. **Capa de Aplicación**: Proporciona servicios de red a las aplicaciones del usuario final, como correo electrónico y navegación web. 📧
 
 ```mermaid
-graph TD
-    L7[7. Application]
-    L6[6. Presentation]
-    L5[5. Session]
-    L4[4. Transport]
-    L3[3. Network]
-    L2[2. Data Link]
-    L1[1. Physical]
+graph TB
+    A["Capa 7. Aplicación"]
+    B["Capa 6. Presentación"]
+    C["Capa 5. Sesión"]
+    D["Capa 4. Transporte"]
+    E["Capa 3. Red"]
+    F["Capa 2. Enlace"]
+    G["Capa 1. Física"]
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
 
-    L7 --- L6
-    L6 --- L5
-    L5 --- L4
-    L4 --- L3
-    L3 --- L2
-    L2 --- L1
-
-    classDef upper fill:#FF4444,stroke:#000000,stroke-width:2px,color:#FFFFFF
-    classDef middle fill:#44AA44,stroke:#000000,stroke-width:2px,color:#FFFFFF
-    classDef lower fill:#4444FF,stroke:#000000,stroke-width:2px,color:#FFFFFF
-    class L7,L6,L5 upper
-    class L4,L3 middle
-    class L2,L1 lower
+    style A fill:#2d3436,stroke:#636e72,stroke-width:2px,color:#fff
+    style B fill:#2d3436,stroke:#636e72,stroke-width:2px,color:#fff
+    style C fill:#2d3436,stroke:#636e72,stroke-width:2px,color:#fff
+    style D fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
+    style E fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
+    style F fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
+    style G fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
 ```
 
 ---
