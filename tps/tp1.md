@@ -779,7 +779,7 @@ graph TB
 # **🤓 28- Realizar cuestionario online y copiar el resultado: (1 por cada integrante)**
 Nicolas:
 ![Puntuacion-Nicolas](28-puntuacion/puntuacion-nico.png)
-Ulises
+Ulises:  
 ![Puntuacion-Ulises](28-puntuacion/puntuacion-ulises.png)
 ---
 
