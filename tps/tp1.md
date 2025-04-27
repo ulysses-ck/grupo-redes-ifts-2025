@@ -49,14 +49,14 @@ paquete de TCP/IP?
 20- Según Microsoft, ¿qué significa NBL?
 
 
-21- Tipos de enlace: MPLS, LAN to LAN, microonda, VSAT. a. Explique cada uno de estos
-tipos de enlace. b. Agregue dos tipos de enlaces, no mencionados anteriormente. c.
-Ranking de enlaces según lo pedido (de uno a seis, siendo uno el mejor): Por
-económico, performance, mayor capacidad, mayor o mejor configuración de
-restricciones, soporte a mayor distancia, menor esfuerzo de configuración. d. Elija un
-tipo de enlace para los siguientes escenarios: 1 d. Conectividad de varios de call centers
-con un data center central. 2 d. Conectar los datos de los pozos petroleros durante 15
-minutos por día. 3 d. Comunicar dos edificios enfrentados en la misma calle.
+21- Tipos de enlace: MPLS, LAN to LAN, microonda, VSAT.  
+- a. Explique cada uno de estos tipos de enlace.
+- b. Agregue dos tipos de enlaces, no mencionados anteriormente.
+- c. Ranking de enlaces según lo pedido (de uno a seis, siendo uno el mejor): Por económico, performance, mayor capacidad, mayor o mejor configuración de restricciones, soporte a mayor distancia, menor esfuerzo de configuración.
+- d. Elija un tipo de enlace para los siguientes escenarios: 
+    1. Conectividad de varios de call centers con un data center central. 
+    2. Conectar los datos de los pozos petroleros durante 15 minutos por día. 
+    3. Comunicar dos edificios enfrentados en la misma calle.
 
 22- Describir la tecnología LTE.
 
