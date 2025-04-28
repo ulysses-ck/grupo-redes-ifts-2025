@@ -866,6 +866,11 @@ Agustin:
 
 ---
 
+Gabriel:  
+![Puntuacion-Gabriel](28-puntuacion/puntuacion-gaby.jpg)  
+
+---
+
 # 📡 **29- Explicar el estándar IEEE 802.3 regula la red. Cómo se implementa, ventajas y desventajas.**
 **IEEE 802.3**: Es un estándar que regula las redes **Ethernet**, definiendo las especificaciones para la transmisión de datos en redes de área local (LAN) mediante cables.
 
