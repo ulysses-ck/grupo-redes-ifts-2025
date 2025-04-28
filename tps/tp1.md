@@ -1002,4 +1002,4 @@ graph LR
 
 **Agustin**: trabaje configurando router y switch en un curso de redes y participe en un tendido de fibra optica.  
 
-**Gabriel**: No tengo experiencia.
+**Gabriel**: Configuré a través de WLAN la impresora de mi casa conectándola a WiFi y realicé una impresión desde mi celular a la impresora a través de NFC.
