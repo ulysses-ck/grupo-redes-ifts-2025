@@ -303,7 +303,7 @@ Un paquete TCP/IP está estructurado en encabezados IP y TCP, que contienen info
     - **FIN** (cierre de conexión) ❌
 
 ---
-# 🌍 **8. Tipos de redes según la geografía Las redes pueden clasificarse por su alcance geográfico:**
+# 🌍 **8. Tipos de redes según la geografía:**
 Las redes pueden clasificarse por su alcance geográfico:
 - **PAN** (Personal Area Network): Para dispositivos personales, como Bluetooth. 📱
 - **LAN** (Local Area Network): Redes pequeñas, como las de hogares o empresas. 🏠
@@ -312,7 +312,7 @@ Las redes pueden clasificarse por su alcance geográfico:
 
 ---
 
-# 🔗 **9. Tipos de redes según la topología Las redes también se clasifican por su estructura de conexión:**
+# 🔗 **9. Tipos de redes según la topología:**
 Las redes también se clasifican por su estructura de conexión:
 - **Red en estrella**: Dispositivos conectados a un nodo central. ⭐
 - **Red en bus**: Todos los dispositivos comparten un único canal de comunicación. 🚌
@@ -850,23 +850,23 @@ graph TB
 ---
 
 # **🤓 28- Realizar cuestionario online y copiar el resultado: (1 por cada integrante)**
-Nicolas:
+# Nicolas:
 ![Puntuacion-Nicolas](28-puntuacion/puntuacion-nico.png)
 
 ---
 
-Ulises:  
+# Ulises:  
 ![Puntuacion-Ulises](28-puntuacion/puntuacion-ulises.png)  
 
 ---
 
 
-Agustin:  
+# Agustin:  
 ![Puntuacion-Agustib](28-puntuacion/puntuacion-agustin.jpg)
 
 ---
 
-Gabriel:  
+# Gabriel:  
 ![Puntuacion-Gabriel](28-puntuacion/puntuacion-gaby.jpg)  
 
 ---
