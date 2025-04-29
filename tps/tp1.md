@@ -3,6 +3,7 @@
 # PROGRAMACIÓN SOBRE REDES
 
 ## TRABAJO PRACTICO TEORICO
+[Presentacion visual del trabajo practico en canva](https://www.canva.com/design/DAGk1_Zrlr0/zySXcY0Mx0XNZwmvc99Fpg/view?utm_content=DAGk1_Zrlr0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8b9cb7b11b)
 
 ## Programación sobre Redes
 
@@ -323,39 +324,7 @@ Las redes también se clasifican por su estructura de conexión:
 - **Red en árbol**: Una red con nodos que se ramifican como un árbol. 🌳
 - **Red híbrida**: Una combinación de diferentes topologías. 🔀
 
-```mermaid
-graph TD
-    subgraph Star
-        S_Central((Central))
-        S_Node1[Node 1]
-        S_Node2[Node 2]
-        S_Node3[Node 3]
-        S_Central --- S_Node1
-        S_Central --- S_Node2
-        S_Central --- S_Node3
-    end
-
-    subgraph Bus
-        B_Bus[Bus]
-        B_Node1[Node 1]
-        B_Node2[Node 2]
-        B_Node3[Node 3]
-        B_Bus --- B_Node1
-        B_Bus --- B_Node2
-        B_Bus --- B_Node3
-    end
-
-    subgraph Ring
-        R_Node1[Node 1]
-        R_Node2[Node 2]
-        R_Node3[Node 3]
-        R_Node4[Node 4]
-        R_Node1 --- R_Node2
-        R_Node2 --- R_Node3
-        R_Node3 --- R_Node4
-        R_Node4 --- R_Node1
-    end
-```
+![Topologia-redes](https://fernandoarciniega.com/wp-content/uploads/image-319.png)
 
 ---
 # 📡 **10- Explicar el servicio de DHCP.**
